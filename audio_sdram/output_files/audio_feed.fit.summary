@@ -1,0 +1,20 @@
+Fitter Status : Successful - Thu Aug 21 14:17:53 2025
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : audio_feed
+Top-level Entity Name : audio_sdram
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 1,590 / 32,070 ( 5 % )
+Total registers : 2734
+Total pins : 241 / 457 ( 53 % )
+Total virtual pins : 0
+Total block memory bits : 2,588,960 / 4,065,280 ( 64 % )
+Total RAM Blocks : 330 / 397 ( 83 % )
+Total DSP Blocks : 0 / 87 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 2 / 6 ( 33 % )
+Total DLLs : 0 / 4 ( 0 % )

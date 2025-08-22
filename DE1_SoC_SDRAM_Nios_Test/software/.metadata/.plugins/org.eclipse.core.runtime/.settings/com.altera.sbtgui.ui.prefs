@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+newBspWizardPage.defaultLocation=C\:\\fpga\\DE1-SoC_v.5.1.3_HWrevF.revG_SystemCD\\Demonstrations\\FPGA\\DE1_SoC_SDRAM_Nios_Test\\software\\DE1_SoC_SDRAM_Nios_Test_BSP
+newBspWizardPage.sopcinfoFile=C\:\\fpga\\DE1-SoC_v.5.1.3_HWrevF.revG_SystemCD\\Demonstrations\\FPGA\\DE1_SoC_SDRAM_Nios_Test\\DE1_SoC_QSYS.sopcinfo
+newSoftwareExampleWizardPage.defaultLocation=C\:\\repos\\fpga_pedal\\DE1_SoC_SDRAM_Nios_Test\\software\\sdram_nios_v3
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\repos\\fpga_pedal\\DE1_SoC_SDRAM_Nios_Test\\DE1_SoC_QSYS.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\repos\\fpga_pedal\\DE1_SoC_SDRAM_Nios_Test\\software\\sdram_nios_v3_bsp

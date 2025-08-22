@@ -1,0 +1,9 @@
+19:30:17 **** Build of configuration Nios II for project DE1_SoC_SDRAM_Nios_Test ****
+make all 
+Info: Building ../DE1_SoC_SDRAM_Nios_Test_bsp/
+C:/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../DE1_SoC_SDRAM_Nios_Test_bsp/
+make[1]: *** No rule to make target `/c/fpga/DE1-SoC_v.5.1.3_HWrevF.revG_SystemCD/Demonstrations/FPGA/DE1_SoC_SDRAM_Nios_Test/software/DE1_SoC_SDRAM_Nios_Test_bsp/system.h', needed by `all'.  Stop.
+make: *** [../DE1_SoC_SDRAM_Nios_Test_bsp/-recurs-make-lib] Error 2
+
+19:30:17 Build Finished (took 499ms)
+

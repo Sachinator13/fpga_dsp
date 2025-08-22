@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=C\:\\repos\\fpga_pedal\\audio_sdram\\software\\audio_feed
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\repos\\fpga_pedal\\audio_sdram\\audio_feed.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\repos\\fpga_pedal\\audio_sdram\\software\\audio_feed_bsp

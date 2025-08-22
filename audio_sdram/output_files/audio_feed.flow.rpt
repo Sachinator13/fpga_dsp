@@ -1,0 +1,139 @@
+Flow report for audio_feed
+Thu Aug 21 14:18:10 2025
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Thu Aug 21 14:18:01 2025       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; audio_feed                                  ;
+; Top-level Entity Name           ; audio_sdram                                 ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA5F31C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 1,590 / 32,070 ( 5 % )                      ;
+; Total registers                 ; 2734                                        ;
+; Total pins                      ; 241 / 457 ( 53 % )                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 2,588,960 / 4,065,280 ( 64 % )              ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 2 / 6 ( 33 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 08/21/2025 14:15:22 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; audio_feed          ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                ;
++-------------------------------------+--------------------------------------------------------------+---------------+---------------+------------+
+; Assignment Name                     ; Value                                                        ; Default Value ; Entity Name   ; Section Id ;
++-------------------------------------+--------------------------------------------------------------+---------------+---------------+------------+
+; COMPILER_SIGNATURE_ID               ; 231273227125823.175578212238868                              ; --            ; --            ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                           ; --            ; --            ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                            ; --            ; --            ; --         ;
+; MISC_FILE                           ; audio_feed/synthesis/../audio_feed.cmp                       ; --            ; --            ; --         ;
+; MISC_FILE                           ; audio_feed/synthesis/../../audio_feed.qsys                   ; --            ; --            ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                       ; --            ; DE1_SoC_Audio ; Top        ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                       ; --            ; audio_sdram   ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                       ; --            ; DE1_SoC_Audio ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                       ; --            ; audio_sdram   ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                       ; --            ; DE1_SoC_Audio ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                       ; --            ; audio_sdram   ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                          ; --            ; --            ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                        ; --            ; --            ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                 ; --            ; --            ; --         ;
+; SLD_FILE                            ; audio_feed/synthesis/audio_feed.regmap                       ; --            ; --            ; --         ;
+; SLD_FILE                            ; audio_feed/synthesis/audio_feed.debuginfo                    ; --            ; --            ; --         ;
+; SLD_INFO                            ; QSYS_NAME audio_feed HAS_SOPCINFO 1 GENERATION_ID 1755780044 ; --            ; --            ; --         ;
+; SOPCINFO_FILE                       ; audio_feed/synthesis/../../audio_feed.sopcinfo               ; --            ; --            ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                           ; --            ; --            ; --         ;
+; TOP_LEVEL_ENTITY                    ; audio_sdram                                                  ; audio_feed    ; --            ; --         ;
++-------------------------------------+--------------------------------------------------------------+---------------+---------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:22     ; 1.0                     ; 5151 MB             ; 00:00:36                           ;
+; Fitter               ; 00:02:05     ; 1.3                     ; 8148 MB             ; 00:11:30                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4931 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:09     ; 3.4                     ; 5602 MB             ; 00:00:23                           ;
+; Total                ; 00:02:42     ; --                      ; --                  ; 00:12:34                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-H31SVF4  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-H31SVF4  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-H31SVF4  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-H31SVF4  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off audio_feed -c audio_feed
+quartus_fit --read_settings_files=off --write_settings_files=off audio_feed -c audio_feed
+quartus_asm --read_settings_files=off --write_settings_files=off audio_feed -c audio_feed
+quartus_sta audio_feed -c audio_feed
+
+
+

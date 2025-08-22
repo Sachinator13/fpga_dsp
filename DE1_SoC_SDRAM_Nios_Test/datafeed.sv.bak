@@ -1,0 +1,10 @@
+module datafeed(
+	clk,
+	button,
+	data_out
+);
+
+input clk;
+input [3:0] button;
+output [15:0] data_out;
+reg [15:0] data_out;
