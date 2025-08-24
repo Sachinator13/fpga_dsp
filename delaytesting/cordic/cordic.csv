@@ -1,0 +1,20 @@
+# system info cordic on 2025.08.22.14:20:57
+system_info:
+name,value
+DEVICE,5CSEMA5F31C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1755868852
+#
+#
+# Files generated for cordic on 2025.08.22.14:20:57
+files:
+filepath,kind,attributes,module,is_top
+simulation/cordic.v,VERILOG,,cordic,true
+simulation/submodules/dspba_library_package.vhd,VHDL,,cordic_CORDIC_0,false
+simulation/submodules/dspba_library.vhd,VHDL,,cordic_CORDIC_0,false
+simulation/submodules/cordic_CORDIC_0.vhd,VHDL,,cordic_CORDIC_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+cordic.CORDIC_0,cordic_CORDIC_0

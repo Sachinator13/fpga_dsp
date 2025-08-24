@@ -1,0 +1,16 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/repos/fpga_dsp/sinegen/cordic/synthesis {C:/repos/fpga_dsp/sinegen/cordic/synthesis/cordic.v}
+vlog -vlog01compat -work work +incdir+C:/repos/fpga_dsp/sinegen/cordic/synthesis {C:/repos/fpga_dsp/sinegen/cordic/synthesis/cordic.v}
+vlog -sv -work work +incdir+C:/repos/fpga_dsp/sinegen/myhdl {C:/repos/fpga_dsp/sinegen/myhdl/sincos.sv}
+vlib cordic
+vmap cordic cordic
+vcom -93 -work cordic {C:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/dspba_library_package.vhd}
+vcom -93 -work cordic {C:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/dspba_library.vhd}
+vcom -93 -work cordic {C:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/cordic_CORDIC_0.vhd}
+

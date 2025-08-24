@@ -1,0 +1,217 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/repos/fpga_dsp/sinegen/simulation/modelsim
+Ecordic_cordic_0
+Z1 w1755959161
+Z2 DPx3 lpm 14 lpm_components 0 22 ZZ?0`GZD@?:kcFM0gmf[@1
+Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ^Ch;U@;bMk1;>A2B<UV`k2
+Z4 DPx9 altera_mf 20 altera_mf_components 0 22 BN6nPmY:UEbXa[^5b@FTW1
+Z5 DPx4 work 21 dspba_library_package 0 22 Y<LfVN]g^YNZRl8Y;KN8S0
+Z6 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+Z7 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z10 8C:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/cordic_CORDIC_0.vhd
+Z11 FC:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/cordic_CORDIC_0.vhd
+l0
+L36 1
+V]@D7Q5d2NkkEW3<1R:=ak3
+!s100 3IFmVJeKLnPD@mgJEiFPO3
+Z12 OV;C;2020.1;71
+31
+Z13 !s110 1755959810
+!i10b 1
+Z14 !s108 1755959810.000000
+Z15 !s90 -reportprogress|300|-93|-work|cordic|C:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/cordic_CORDIC_0.vhd|
+!s107 C:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/cordic_CORDIC_0.vhd|
+!i113 1
+Z16 o-93 -work cordic
+Z17 tExplicit 1 CvgOpt 0
+Anormal
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 15 cordic_cordic_0 0 22 ]@D7Q5d2NkkEW3<1R:=ak3
+!i122 2
+l578
+L46 2063
+V@0jJn@YER>`j=d4kmS?BV2
+!s100 3NRafLQnM]5VJ=9O8L49L2
+R12
+31
+R13
+!i10b 1
+R14
+R15
+Z18 !s107 C:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/cordic_CORDIC_0.vhd|
+!i113 1
+R16
+R17
+Edspba_delay
+R1
+R5
+R8
+R9
+!i122 1
+R0
+Z19 8C:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/dspba_library.vhd
+Z20 FC:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/dspba_library.vhd
+l0
+L18 1
+VRF8af1<JOD7Iia:n[Tj[72
+!s100 >TY9@l4a>2O5Wd_6jF4:g0
+R12
+31
+R13
+!i10b 1
+R14
+Z21 !s90 -reportprogress|300|-93|-work|cordic|C:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/dspba_library.vhd|
+Z22 !s107 C:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/dspba_library.vhd|
+!i113 1
+R16
+R17
+Adelay
+R5
+R8
+R9
+DEx4 work 11 dspba_delay 0 22 RF8af1<JOD7Iia:n[Tj[72
+!i122 1
+l37
+L34 51
+VhoM5HkCXYYn02Cja^aca:1
+!s100 DAfPXKZhR<Ac>Wg8zYj1H3
+R12
+31
+R13
+!i10b 1
+R14
+R21
+R22
+!i113 1
+R16
+R17
+Pdspba_library_package
+R8
+R9
+!i122 0
+R1
+R0
+8C:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/dspba_library_package.vhd
+FC:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/dspba_library_package.vhd
+l0
+L17 1
+VY<LfVN]g^YNZRl8Y;KN8S0
+!s100 @e;XE0e^oAdIdzY=Rc];H3
+R12
+31
+R13
+!i10b 1
+!s108 1755959809.000000
+!s90 -reportprogress|300|-93|-work|cordic|C:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/dspba_library_package.vhd|
+!s107 C:/repos/fpga_dsp/sinegen/cordic/synthesis/submodules/dspba_library_package.vhd|
+!i113 1
+R16
+R17
+Edspba_pipe
+R1
+R7
+R8
+R9
+!i122 1
+R0
+R19
+R20
+l0
+L343 1
+VN:nPCX[XRm0@d4i2:RZ1<1
+!s100 ko3XcgZgdPgSD;SDR?Wmi2
+R12
+31
+R13
+!i10b 1
+R14
+R21
+R22
+!i113 1
+R16
+R17
+Artl
+R7
+R8
+R9
+DEx4 work 10 dspba_pipe 0 22 N:nPCX[XRm0@d4i2:RZ1<1
+!i122 1
+l362
+L356 21
+V70Xo3`EUToGn6[GGbDFZ80
+!s100 =]hA3YBJaaU9dNBMla?I?2
+R12
+31
+R13
+!i10b 1
+R14
+R21
+R22
+!i113 1
+R16
+R17
+Edspba_sync_reg
+R1
+R5
+R7
+R8
+R9
+!i122 1
+R0
+R19
+R20
+l0
+L93 1
+VS><IzHjfW?O<UNUZMoT:43
+!s100 G`[2Ci2RQWoL`zK>2h>oj2
+R12
+31
+R13
+!i10b 1
+R14
+R21
+R22
+!i113 1
+R16
+R17
+Async_reg
+R5
+R7
+R8
+R9
+DEx4 work 14 dspba_sync_reg 0 22 S><IzHjfW?O<UNUZMoT:43
+!i122 1
+l136
+L117 219
+VZdk4?RkYBQb:MYiELhOjY2
+!s100 3CF6gEiK7^`H_<3Ne[inV2
+R12
+31
+R13
+!i10b 1
+R14
+R21
+R22
+!i113 1
+R16
+R17

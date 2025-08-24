@@ -1,0 +1,179 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/de1soc/memorytesting
+vcounter
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1753703411
+!i10b 1
+!s100 C_MWeWfNA6`8>iF8z:aUe0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IGeOa[=74MB;cNSI?iLLh62
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/repos/pedal/delaytesting
+w1753703396
+8counter.sv
+Fcounter.sv
+!i122 63
+L0 1 18
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1753703411.000000
+!s107 counter.sv|
+!s90 -reportprogress|300|counter.sv|
+!i113 1
+Z6 tCvgOpt 0
+vdualportram
+R1
+!s110 1753776872
+!i10b 1
+!s100 ZlEL[S3m1@]D9g=Bfmh6N0
+R2
+IeGK;HC_@OJ`a@`i=bP:ok0
+R3
+S1
+R4
+w1753776821
+8dualportram.sv
+Fdualportram.sv
+!i122 101
+L0 1 44
+R5
+r1
+!s85 0
+31
+!s108 1753776872.000000
+!s107 dualportram.sv|
+!s90 -reportprogress|300|dualportram.sv|
+!i113 1
+R6
+vmemory_reading
+R1
+!s110 1751566527
+!i10b 1
+!s100 Q]2IQ:=lb??_?lTRhL>z43
+R2
+IB@baSdMJHbQ>VKkNZo9SH3
+R3
+S1
+R0
+w1751566277
+8memory_reading.sv
+Fmemory_reading.sv
+!i122 3
+L0 1 23
+R5
+r1
+!s85 0
+31
+!s108 1751566526.000000
+!s107 memory_reading.sv|
+!s90 -reportprogress|300|memory_reading.sv|
+!i113 1
+R6
+vmemory_writing
+R1
+!s110 1753025270
+!i10b 1
+!s100 e2U@i^bI3m>jF<QHAY;Wa2
+R2
+IbYbGm0B5S?baL^E_0YJM50
+R3
+S1
+Z7 dC:/repos/pedal/memorytesting
+w1753025258
+8memory_write.sv
+Fmemory_write.sv
+!i122 50
+L0 1 24
+R5
+r1
+!s85 0
+31
+!s108 1753025270.000000
+!s107 memory_write.sv|
+!s90 -reportprogress|300|memory_write.sv|
+!i113 1
+R6
+vprocessor
+R1
+!s110 1753777555
+!i10b 1
+!s100 X>jWnb>SLzMN;b]dTC@h63
+R2
+I5:=:2EcbQTg6?l@P?8GfB1
+R3
+S1
+R4
+w1753777522
+8processor.sv
+Fprocessor.sv
+!i122 106
+L0 1 73
+R5
+r1
+!s85 0
+31
+!s108 1753777555.000000
+!s107 processor.sv|
+!s90 -reportprogress|300|processor.sv|
+!i113 1
+R6
+vtb_ram_1
+R1
+!s110 1753776878
+!i10b 1
+!s100 G90LzVI1THJL79B<@FM^`3
+R2
+IGnRCZiTbD=>A<dhj0@f]L0
+R3
+S1
+R4
+w1753776819
+8tb_write.sv
+Ftb_write.sv
+!i122 102
+L0 1 82
+R5
+r1
+!s85 0
+31
+!s108 1753776878.000000
+!s107 tb_write.sv|
+!s90 -reportprogress|300|tb_write.sv|
+!i113 1
+R6
+vtestbench_memory
+R1
+!s110 1753012003
+!i10b 1
+!s100 Q3dDPmR4MCE4h4ioQjE<J1
+R2
+ICCH77`8Td@I6Mf>fSI3B82
+R3
+S1
+R7
+w1752859387
+8testbench.sv
+Ftestbench.sv
+!i122 10
+L0 3 39
+R5
+r1
+!s85 0
+31
+!s108 1753012003.000000
+!s107 testbench.sv|
+!s90 -reportprogress|300|testbench.sv|
+!i113 1
+R6

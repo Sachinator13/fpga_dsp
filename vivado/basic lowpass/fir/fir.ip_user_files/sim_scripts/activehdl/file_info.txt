@@ -1,0 +1,12 @@
+xbip_utils_v3_0_vh_rfs.vhd,vhdl,xbip_utils_v3_0_14,../../ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd,incdir="../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef"
+c_reg_fd_v12_0_vh_rfs.vhd,vhdl,c_reg_fd_v12_0_10,../../ipstatic/hdl/c_reg_fd_v12_0_vh_rfs.vhd,incdir="../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef"
+xbip_dsp48_wrapper_v3_0_vh_rfs.vhd,vhdl,xbip_dsp48_wrapper_v3_0_7,../../ipstatic/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd,incdir="../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef"
+xbip_pipe_v3_0_vh_rfs.vhd,vhdl,xbip_pipe_v3_0_10,../../ipstatic/hdl/xbip_pipe_v3_0_vh_rfs.vhd,incdir="../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef"
+c_addsub_v12_0_vh_rfs.vhd,vhdl,c_addsub_v12_0_20,../../ipstatic/hdl/c_addsub_v12_0_vh_rfs.vhd,incdir="../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef"
+mult_gen_v12_0_vh_rfs.vhd,vhdl,mult_gen_v12_0_23,../../ipstatic/hdl/mult_gen_v12_0_vh_rfs.vhd,incdir="../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef"
+axi_utils_v2_0_vh_rfs.vhd,vhdl,axi_utils_v2_0_10,../../ipstatic/hdl/axi_utils_v2_0_vh_rfs.vhd,incdir="../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef"
+cordic_v6_0_vh_rfs.vhd,vhdl,cordic_v6_0_24,../../ipstatic/hdl/cordic_v6_0_vh_rfs.vhd,incdir="../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef"
+cordic_0.vhd,vhdl,xil_defaultlib,../../../fir.gen/sources_1/ip/cordic_0/sim/cordic_0.vhd,incdir="../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef"
+fir.sv,systemverilog,xil_defaultlib,../../../../../repos/fpga_dsp/vivado/basic lowpass/fir/MyStuff/fir.sv,incdir="../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef"
+fir_tb.v,verilog,xil_defaultlib,../../../../../repos/fpga_dsp/vivado/basic lowpass/fir/MyStuff/fir_tb.v,incdir="../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef"
+glbl.v,Verilog,xil_defaultlib,glbl.v

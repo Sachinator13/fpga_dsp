@@ -1,0 +1,55 @@
+# Reading pref.tcl
+# do memory_run_msim_rtl_systemverilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/repos/fpga_dsp/delaytesting {C:/repos/fpga_dsp/delaytesting/memory_reading.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:37:10 on Aug 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/repos/fpga_dsp/delaytesting" C:/repos/fpga_dsp/delaytesting/memory_reading.sv 
+# -- Compiling module memory_reading
+# 
+# Top level modules:
+# 	memory_reading
+# End time: 15:37:10 on Aug 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/repos/fpga_dsp/delaytesting {C:/repos/fpga_dsp/delaytesting/tb_write.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:37:10 on Aug 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/repos/fpga_dsp/delaytesting" C:/repos/fpga_dsp/delaytesting/tb_write.sv 
+# -- Compiling module tb_ram_1
+# 
+# Top level modules:
+# 	tb_ram_1
+# End time: 15:37:10 on Aug 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_write
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_write 
+# Start time: 15:37:10 on Aug 22,2025
+# ** Error: (vsim-3170) Could not find 'tb_write'.
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cyclonev
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cyclonev_hssi
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cyclonev_pcie_hip
+#             C:/repos/fpga_dsp/delaytesting/simulation/modelsim/rtl_work
+#             C:/repos/fpga_dsp/delaytesting/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./memory_run_msim_rtl_systemverilog.do PAUSED at line 12
+# End time: 15:21:32 on Aug 23,2025, Elapsed time: 23:44:22
+# Errors: 1, Warnings: 0

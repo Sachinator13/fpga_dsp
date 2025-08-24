@@ -1,0 +1,17 @@
+module memory_reading(
+	input clk,
+	input [9:0] addr,
+	output reg [7:0] data
+);
+
+reg [7:0] mem_array [0:1023];
+
+initial begin
+	$readmemh("data.mem", mem_array);
+end
+
+always @(posedge clk) begin
+	data <= mem_array[addr];
+end
+
+endmodule

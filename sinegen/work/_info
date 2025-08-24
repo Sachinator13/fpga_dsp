@@ -1,0 +1,81 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/repos/fpga_dsp/sinegen
+vcordic
+!s110 1755961022
+!i10b 1
+!s100 dWm<iQ?MKO>5Gbb_X0AEA2
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I7;?4zC0[9089YN]462]EX2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dc:/repos/fpga_dsp/sinegen
+w1755959161
+8cordic/synthesis/cordic.v
+Fcordic/synthesis/cordic.v
+!i122 9
+L0 6 17
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1755961022.000000
+!s107 cordic/synthesis/cordic.v|
+!s90 -reportprogress|300|cordic/synthesis/cordic.v|
+!i113 1
+Z4 tCvgOpt 0
+vsincos
+Z5 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1755960995
+!i10b 1
+!s100 N<McS7IgM;N3jQH5MB2g22
+R0
+ImbN2agLPE6[DaZTBzD>DS3
+R1
+S1
+R2
+w1755959259
+8sincos.sv
+Fsincos.sv
+!i122 7
+L0 1 17
+R3
+r1
+!s85 0
+31
+!s108 1755960995.000000
+!s107 sincos.sv|
+!s90 -reportprogress|300|sincos.sv|
+!i113 1
+R4
+vsincos_tb
+R5
+!s110 1755961004
+!i10b 1
+!s100 jASFfmBXc<]fn4UUFNQ9C3
+R0
+IDX?Y1OABZebMU@3VAUO[C3
+R1
+S1
+R2
+w1755959660
+8sincos_tb.sv
+Fsincos_tb.sv
+!i122 8
+L0 3 47
+R3
+r1
+!s85 0
+31
+!s108 1755961004.000000
+!s107 sincos_tb.sv|
+!s90 -reportprogress|300|sincos_tb.sv|
+!i113 1
+R4
