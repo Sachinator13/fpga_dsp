@@ -20,6 +20,8 @@ reg signed [15:0] coeff [0:8] = { 16'h 04F6,
                                   16'h 0AE4,
                                   16'h 04F6};
                                   
+                                  
+
 reg signed [15:0] delayed_signal [0:8];
 reg signed [31:0] prod [0:8];
 reg signed [32:0] sum_0 [0:4];

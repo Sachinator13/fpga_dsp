@@ -7,8 +7,8 @@ Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "C:/repos/fpga_dsp/vivado/basic lowpass/fir/MyStuff/fir.sv" Line 4. Module fir doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/repos/fpga_dsp/vivado/basic lowpass/fir/MyStuff/fir.sv" Line 4. Module fir doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/repos/fpga_dsp/vivado/basic lowpass/fir/MyStuff/fir_transposed.sv" Line 1. Module fir_transposed_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/repos/fpga_dsp/vivado/basic lowpass/fir/MyStuff/fir_transposed.sv" Line 1. Module fir_transposed_default doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package std.standard
@@ -87,7 +87,7 @@ Compiling architecture synth of entity cordic_v6_0_24.cordic_v6_0_24_synth [\cor
 Compiling architecture synth of entity cordic_v6_0_24.cordic_v6_0_24_viv [\cordic_v6_0_24_viv(c_architectu...]
 Compiling architecture xilinx of entity cordic_v6_0_24.cordic_v6_0_24 [\cordic_v6_0_24(c_architecture=2...]
 Compiling architecture cordic_0_arch of entity xil_defaultlib.cordic_0 [cordic_0_default]
-Compiling module xil_defaultlib.fir
+Compiling module xil_defaultlib.fir_transposed_default
 Compiling module xil_defaultlib.fir_tb
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot fir_tb_behav

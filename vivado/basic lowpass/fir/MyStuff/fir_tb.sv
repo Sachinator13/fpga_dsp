@@ -32,6 +32,18 @@ reg signed [15:0] coeff [0:8] = { 16'h 04F6,
                                   16'h 1089,
                                   16'h 0AE4,
                                   16'h 04F6};
+                                  
+                                  
+reg signed [15:0] coeff2 [0:8] = { 16'h 0111,
+                                  16'h 0AAA,
+                                  16'h 1BBB,
+                                  16'h 1CCC,
+                                  16'h 1DDD,
+                                  16'h 1EEE,
+                                  16'h 1FFF,
+                                  16'h 0EEE,
+                                  16'h 0DDD};
+                                  
 
 
 cordic_0 cordic_inst_0 (

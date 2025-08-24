@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="fir_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="fir_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="975.001 ns"></ZoomEndTime>
+      <Cursor1Time time="555.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="204"></NameColumnWidth>
+      <ValueColumnWidth column_width="286"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/fir_tb/cordic_clk" type="logic">
+      <obj_property name="ElementShortName">cordic_clk</obj_property>
+      <obj_property name="ObjectShortName">cordic_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/fir_clk" type="logic">
+      <obj_property name="ElementShortName">fir_clk</obj_property>
+      <obj_property name="ObjectShortName">fir_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/phase_tvalid" type="logic">
+      <obj_property name="ElementShortName">phase_tvalid</obj_property>
+      <obj_property name="ObjectShortName">phase_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/phase_2MHz" type="array">
+      <obj_property name="ElementShortName">phase_2MHz[15:0]</obj_property>
+      <obj_property name="ObjectShortName">phase_2MHz[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/phase_30MHz" type="array">
+      <obj_property name="ElementShortName">phase_30MHz[15:0]</obj_property>
+      <obj_property name="ObjectShortName">phase_30MHz[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/sincos_2MHz_tvalid" type="logic">
+      <obj_property name="ElementShortName">sincos_2MHz_tvalid</obj_property>
+      <obj_property name="ObjectShortName">sincos_2MHz_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/sin_2MHz" type="array">
+      <obj_property name="ElementShortName">sin_2MHz[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sin_2MHz[15:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">14</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/cos_2MHz" type="array">
+      <obj_property name="ElementShortName">cos_2MHz[15:0]</obj_property>
+      <obj_property name="ObjectShortName">cos_2MHz[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/sincos_30MHz_tvalid" type="logic">
+      <obj_property name="ElementShortName">sincos_30MHz_tvalid</obj_property>
+      <obj_property name="ObjectShortName">sincos_30MHz_tvalid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/sin_30MHz" type="array">
+      <obj_property name="ElementShortName">sin_30MHz[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sin_30MHz[15:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">14</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/cos_30MHz" type="array">
+      <obj_property name="ElementShortName">cos_30MHz[15:0]</obj_property>
+      <obj_property name="ObjectShortName">cos_30MHz[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/noisy_signal" type="array">
+      <obj_property name="ElementShortName">noisy_signal[15:0]</obj_property>
+      <obj_property name="ObjectShortName">noisy_signal[15:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">14</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/filtered_signal" type="array">
+      <obj_property name="ElementShortName">filtered_signal[15:0]</obj_property>
+      <obj_property name="ObjectShortName">filtered_signal[15:0]</obj_property>
+      <obj_property name="Radix">REALRADIX</obj_property>
+      <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">14</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/CORDIC_CLK_PERIOD" type="array">
+      <obj_property name="ElementShortName">CORDIC_CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CORDIC_CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/FIR_CLK_PERIOD" type="array">
+      <obj_property name="ElementShortName">FIR_CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">FIR_CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/PI_POS" type="array">
+      <obj_property name="ElementShortName">PI_POS[15:0]</obj_property>
+      <obj_property name="ObjectShortName">PI_POS[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/PI_NEG" type="array">
+      <obj_property name="ElementShortName">PI_NEG[15:0]</obj_property>
+      <obj_property name="ObjectShortName">PI_NEG[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/PHASE_INC_2MHz" type="array">
+      <obj_property name="ElementShortName">PHASE_INC_2MHz[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PHASE_INC_2MHz[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fir_tb/PHASE_INC_30MHz" type="array">
+      <obj_property name="ElementShortName">PHASE_INC_30MHz[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PHASE_INC_30MHz[31:0]</obj_property>
+   </wvobject>
+</wave_config>
