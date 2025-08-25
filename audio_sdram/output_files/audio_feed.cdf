@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("C:/repos/fpga_pedal/audio_sdram/output_files/") File("audio_feed.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("C:/repos/fpga_dsp/audio_sdram/output_files/") File("audio_feed.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

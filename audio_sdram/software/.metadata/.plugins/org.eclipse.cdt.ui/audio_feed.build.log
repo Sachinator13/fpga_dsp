@@ -1,6 +1,23 @@
-23:41:38 **** Clean-only build of configuration Nios II for project audio_feed ****
-wsl make clean 
-[audio_feed clean complete]
+18:51:42 **** Incremental Build of configuration Nios II for project audio_feed ****
+wsl make all 
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_bsp/
+Makefile not up to date.
+/mnt/c/repos/fpga_pedal/audio_sdram/audio_feed.sopcinfo has been modified since the BSP was generated.
 
-23:41:39 Build Finished (took 749ms)
+Generate the BSP to update the Makefile, and then build again.
+
+To generate from Eclipse:
+ 1. Right-click the BSP project.
+ 2. In the Nios II Menu, click Generate BSP.
+
+To generate from the command line:
+ nios2-bsp-generate-files --settings=<settings file> --bsp-dir=<target bsp files directory>
+
+Makefile:555: recipe for target 'public.mk' failed
+make[1]: *** [public.mk] Error 1
+Makefile:846: recipe for target '/mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_bsp/-recurs-make-lib' failed
+make: *** [/mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_bsp/-recurs-make-lib] Error 2
+
+18:51:43 Build Finished (took 906ms)
 

@@ -370,7 +370,7 @@ static void audio_passthrough_init(void) {
 
 }
 
-static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0;
+static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
 
 
 void tone_test(void){
@@ -426,17 +426,21 @@ static void record_to_play(void){
 		int16_t L, R;
 		AUDIO_AdcFifoGetData(&L, &R);
 		uint32_t word = ((uint32_t)(uint16_t)L << 16) | (uint16_t)R;
-		buf[w++] = word;
+
+		buf[w++] = word; // write to memory
+
 		if (!AUDIO_DacFifoNotFull()) continue;
-		uint32_t word_out = buf[r++];
+
+		uint32_t word_out = buf[r++]; //read from memory
+
 		int16_t L_out = (int16_t)(word_out >> 16);
 		int16_t R_out = (int16_t)(word_out & 0xFFFF);
 		if (!AUDIO_DacFifoNotFull()) { r--; continue; }  // re-try same word
 		AUDIO_DAC_WRITE_L(L_out);
 		if (!AUDIO_DacFifoNotFull()) { r--; continue; }
-		AUDIO_DAC_WRITE_R(0);
+		AUDIO_DAC_WRITE_R(L_out);
 		tick_2++;
-		if ((tick_2 & 0x7FFF)==0) printf("while loop running");
+		if ((tick_2 & 0x7FFF)==0) printf("while shite loop running");
 
 
 		if(w < WORDS == FALSE){
@@ -446,8 +450,35 @@ static void record_to_play(void){
 	}
 }
 
+static inline void init_audio_write(uint16_t v) {
+    IOWR_ALTERA_AVALON_PIO_DATA(INIT_AUDIO_BASE, v);
+}
+static inline uint16_t final_audio_read(void) {
+	return (uint16_t)IORD_ALTERA_AVALON_PIO_DATA(FINAL_AUDIO_BASE);
+}
 
 
+static void write_to_hardware(void){
+	if(!AUDIO_AdcFifoNotEmpty()) continue;
+	int16_t L, R;
+	AUDIO_AdcFifoGetData(&L, &R);
+	init_audio_write(L);
+	tick_6++;
+	if ((tick_6 & 0x7FFF)==0) printf("while this loop running");
+}
+
+static void read_from_hardware (void){
+	int16_t L;
+	L = final_audio_read();
+	if (!AUDIO_DacFifoNotFull()) { r--; continue; }  // re-try same word
+	AUDIO_DAC_WRITE_L(L);
+	if (!AUDIO_DacFifoNotFull()) { r--; continue; }
+	AUDIO_DAC_WRITE_R(L);
+	tick_5++;
+	if ((tick_5 & 0x7FFF)==0) printf("while this loop running");
+
+
+}
 
 int main(void) {
 	alt_u16 ch_right, ch_left;
@@ -463,7 +494,15 @@ int main(void) {
     printf("Audio pass-through started (LINE-IN -> LINE-OUT)\n");
     printf("hello gang this is sachinator13");
 
-    record_to_play();
+    //record_to_play();
+
+    while(1){
+    	write_to_hardware();
+    	read_from_hardware();
+    	tick_4++;
+    	if ((tick_4 & 0x7FFF)==0) printf("while this loop running");
+
+    }
 
 //    printf("Recording %d sec...\n", SECS);
 //    uint32_t nwords = record_to_sdram();

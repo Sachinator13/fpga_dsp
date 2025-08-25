@@ -856,14 +856,15 @@ set_instance_assignment -name GLOBAL_SIGNAL OFF -to u0|hps_0|hps_io|border|hps_s
 set_instance_assignment -name ENABLE_BENEFICIAL_SKEW_OPTIMIZATION_FOR_NON_GLOBAL_CLOCKS ON -to u0|hps_0|hps_io|border|hps_sdram_inst -entity DE1_SoC_Audio
 set_instance_assignment -name PLL_COMPENSATION_MODE DIRECT -to u0|hps_0|hps_io|border|hps_sdram_inst|pll0|fbout -entity DE1_SoC_Audio
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE1_SoC_Audio -section_id Top
-set_global_assignment -name QIP_FILE audio_feed/synthesis/audio_feed.qip
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name SYSTEMVERILOG_FILE audio_sdram.sv
-set_global_assignment -name SDC_FILE audio_sdram.sdc
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name QIP_FILE audio_feed/synthesis/audio_feed.qip
+set_global_assignment -name SYSTEMVERILOG_FILE audio_sdram.sv
+set_global_assignment -name SDC_FILE audio_sdram.sdc
+set_global_assignment -name SYSTEMVERILOG_FILE processor.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

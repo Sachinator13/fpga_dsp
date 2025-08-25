@@ -185,6 +185,16 @@ wire reset_n;
 
 assign reset_n = 1'b1;
 
+wire [15:0] init_audio;
+wire [15:0] final_audio;
+
+
+	processor test1(
+		.clk(CLOCK_50),
+		.input_sig(init_audio),
+		.output_sig(final_audio)
+	);
+
 	audio_feed u0 (
 		.clk_clk                            (CLOCK_50),                            //                         clk.clk
 		.reset_reset_n                      (reset_n),                      //                       reset.reset_n
@@ -216,9 +226,12 @@ assign reset_n = 1'b1;
 		.audio_conduit_end_ADCLRC           (AUD_ADCLRCK),           //                            .ADCLRC
 		.audio_conduit_end_DACDAT           (AUD_DACDAT),           //                            .DACDAT
 		.audio_conduit_end_DACLRC           (AUD_DACLRCK),           //                            .DACLRC
-		.audio_conduit_end_BCLK             (AUD_BCLK)             //                            .BCLK
+		.audio_conduit_end_BCLK             (AUD_BCLK),             //                            .BCLK
 //		.altpll_audio_locked_export         (<connected-to-altpll_audio_locked_export>)          //         altpll_audio_locked.export
+		.init_audio_external_connection_export  (init_audio),  //  init_audio_external_connection.export
+		.final_audio_external_connection_export (final_audio)  // final_audio_external_connection.export
 	);
+	
 
 	
 endmodule

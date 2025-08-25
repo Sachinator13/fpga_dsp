@@ -4,37 +4,39 @@
 
 `timescale 1 ps / 1 ps
 module audio_feed (
-		output wire        altpll_audio_locked_export,         //         altpll_audio_locked.export
-		output wire        audio_conduit_end_XCK,              //           audio_conduit_end.XCK
-		input  wire        audio_conduit_end_ADCDAT,           //                            .ADCDAT
-		input  wire        audio_conduit_end_ADCLRC,           //                            .ADCLRC
-		output wire        audio_conduit_end_DACDAT,           //                            .DACDAT
-		input  wire        audio_conduit_end_DACLRC,           //                            .DACLRC
-		input  wire        audio_conduit_end_BCLK,             //                            .BCLK
-		input  wire        clk_clk,                            //                         clk.clk
-		output wire        i2c_scl_external_connection_export, // i2c_scl_external_connection.export
-		inout  wire        i2c_sda_external_connection_export, // i2c_sda_external_connection.export
-		input  wire [3:0]  key_external_connection_export,     //     key_external_connection.export
-		output wire [9:0]  pio_0_external_connection_export,   //   pio_0_external_connection.export
-		output wire        pll_locked_export,                  //                  pll_locked.export
-		output wire        pll_sdam_clk,                       //                    pll_sdam.clk
-		input  wire        reset_reset_n,                      //                       reset.reset_n
-		output wire [12:0] sdram_wire_addr,                    //                  sdram_wire.addr
-		output wire [1:0]  sdram_wire_ba,                      //                            .ba
-		output wire        sdram_wire_cas_n,                   //                            .cas_n
-		output wire        sdram_wire_cke,                     //                            .cke
-		output wire        sdram_wire_cs_n,                    //                            .cs_n
-		inout  wire [15:0] sdram_wire_dq,                      //                            .dq
-		output wire [1:0]  sdram_wire_dqm,                     //                            .dqm
-		output wire        sdram_wire_ras_n,                   //                            .ras_n
-		output wire        sdram_wire_we_n,                    //                            .we_n
-		output wire [47:0] seg7_conduit_end_export,            //            seg7_conduit_end.export
-		input  wire [9:0]  sw_external_connection_export       //      sw_external_connection.export
+		output wire        altpll_audio_locked_export,             //             altpll_audio_locked.export
+		output wire        audio_conduit_end_XCK,                  //               audio_conduit_end.XCK
+		input  wire        audio_conduit_end_ADCDAT,               //                                .ADCDAT
+		input  wire        audio_conduit_end_ADCLRC,               //                                .ADCLRC
+		output wire        audio_conduit_end_DACDAT,               //                                .DACDAT
+		input  wire        audio_conduit_end_DACLRC,               //                                .DACLRC
+		input  wire        audio_conduit_end_BCLK,                 //                                .BCLK
+		input  wire        clk_clk,                                //                             clk.clk
+		input  wire [15:0] final_audio_external_connection_export, // final_audio_external_connection.export
+		output wire        i2c_scl_external_connection_export,     //     i2c_scl_external_connection.export
+		inout  wire        i2c_sda_external_connection_export,     //     i2c_sda_external_connection.export
+		output wire [15:0] init_audio_external_connection_export,  //  init_audio_external_connection.export
+		input  wire [3:0]  key_external_connection_export,         //         key_external_connection.export
+		output wire [9:0]  pio_0_external_connection_export,       //       pio_0_external_connection.export
+		output wire        pll_locked_export,                      //                      pll_locked.export
+		output wire        pll_sdam_clk,                           //                        pll_sdam.clk
+		input  wire        reset_reset_n,                          //                           reset.reset_n
+		output wire [12:0] sdram_wire_addr,                        //                      sdram_wire.addr
+		output wire [1:0]  sdram_wire_ba,                          //                                .ba
+		output wire        sdram_wire_cas_n,                       //                                .cas_n
+		output wire        sdram_wire_cke,                         //                                .cke
+		output wire        sdram_wire_cs_n,                        //                                .cs_n
+		inout  wire [15:0] sdram_wire_dq,                          //                                .dq
+		output wire [1:0]  sdram_wire_dqm,                         //                                .dqm
+		output wire        sdram_wire_ras_n,                       //                                .ras_n
+		output wire        sdram_wire_we_n,                        //                                .we_n
+		output wire [47:0] seg7_conduit_end_export,                //                seg7_conduit_end.export
+		input  wire [9:0]  sw_external_connection_export           //          sw_external_connection.export
 	);
 
 	wire         pll_outclk0_clk;                                            // pll:outclk_0 -> [cpu_pheripheral_bridge:s0_clk, irq_mapper:clk, irq_synchronizer:sender_clk, irq_synchronizer_001:sender_clk, jtag_uart:clk, mm_interconnect_0:pll_outclk0_clk, nios2_gen2_0:clk, onchip_memory2:clk, rst_controller_003:clk, rst_controller_004:clk, sdram:clk, sysid_qsys:clock, timer:clk]
 	wire         altpll_audio_outclk0_clk;                                   // altpll_audio:outclk_0 -> [audio:avs_s1_clk, mm_interconnect_0:altpll_audio_outclk0_clk, rst_controller_001:clk]
-	wire         pll_outclk2_clk;                                            // pll:outclk_2 -> [cpu_pheripheral_bridge:m0_clk, i2c_scl:clk, i2c_sda:clk, irq_synchronizer:receiver_clk, irq_synchronizer_001:receiver_clk, key:clk, mm_interconnect_1:pll_outclk2_clk, pio_led:clk, rst_controller_002:clk, seg7:s_clk, sw:clk]
+	wire         pll_outclk2_clk;                                            // pll:outclk_2 -> [cpu_pheripheral_bridge:m0_clk, final_audio:clk, i2c_scl:clk, i2c_sda:clk, init_audio:clk, irq_synchronizer:receiver_clk, irq_synchronizer_001:receiver_clk, key:clk, mm_interconnect_1:pll_outclk2_clk, pio_led:clk, rst_controller_002:clk, seg7:s_clk, sw:clk]
 	wire  [31:0] nios2_gen2_0_data_master_readdata;                          // mm_interconnect_0:nios2_gen2_0_data_master_readdata -> nios2_gen2_0:d_readdata
 	wire         nios2_gen2_0_data_master_waitrequest;                       // mm_interconnect_0:nios2_gen2_0_data_master_waitrequest -> nios2_gen2_0:d_waitrequest
 	wire         nios2_gen2_0_data_master_debugaccess;                       // nios2_gen2_0:debug_mem_slave_debugaccess_to_roms -> mm_interconnect_0:nios2_gen2_0_data_master_debugaccess
@@ -140,6 +142,13 @@ module audio_feed (
 	wire   [1:0] mm_interconnect_1_key_s1_address;                           // mm_interconnect_1:key_s1_address -> key:address
 	wire         mm_interconnect_1_key_s1_write;                             // mm_interconnect_1:key_s1_write -> key:write_n
 	wire  [31:0] mm_interconnect_1_key_s1_writedata;                         // mm_interconnect_1:key_s1_writedata -> key:writedata
+	wire         mm_interconnect_1_init_audio_s1_chipselect;                 // mm_interconnect_1:init_audio_s1_chipselect -> init_audio:chipselect
+	wire  [31:0] mm_interconnect_1_init_audio_s1_readdata;                   // init_audio:readdata -> mm_interconnect_1:init_audio_s1_readdata
+	wire   [1:0] mm_interconnect_1_init_audio_s1_address;                    // mm_interconnect_1:init_audio_s1_address -> init_audio:address
+	wire         mm_interconnect_1_init_audio_s1_write;                      // mm_interconnect_1:init_audio_s1_write -> init_audio:write_n
+	wire  [31:0] mm_interconnect_1_init_audio_s1_writedata;                  // mm_interconnect_1:init_audio_s1_writedata -> init_audio:writedata
+	wire  [31:0] mm_interconnect_1_final_audio_s1_readdata;                  // final_audio:readdata -> mm_interconnect_1:final_audio_s1_readdata
+	wire   [1:0] mm_interconnect_1_final_audio_s1_address;                   // mm_interconnect_1:final_audio_s1_address -> final_audio:address
 	wire         irq_mapper_receiver0_irq;                                   // timer:irq -> irq_mapper:receiver0_irq
 	wire         irq_mapper_receiver1_irq;                                   // jtag_uart:av_irq -> irq_mapper:receiver1_irq
 	wire  [31:0] nios2_gen2_0_irq_irq;                                       // irq_mapper:sender_irq -> nios2_gen2_0:irq
@@ -150,7 +159,7 @@ module audio_feed (
 	wire         rst_controller_reset_out_reset;                             // rst_controller:reset_out -> altpll_audio:rst
 	wire         nios2_gen2_0_debug_reset_request_reset;                     // nios2_gen2_0:debug_reset_request -> [rst_controller:reset_in1, rst_controller_004:reset_in1]
 	wire         rst_controller_001_reset_out_reset;                         // rst_controller_001:reset_out -> [audio:avs_s1_reset, mm_interconnect_0:audio_clock_sink_reset_reset_bridge_in_reset_reset]
-	wire         rst_controller_002_reset_out_reset;                         // rst_controller_002:reset_out -> [cpu_pheripheral_bridge:m0_reset, i2c_scl:reset_n, i2c_sda:reset_n, irq_synchronizer:receiver_reset, irq_synchronizer_001:receiver_reset, key:reset_n, mm_interconnect_1:cpu_pheripheral_bridge_m0_reset_reset_bridge_in_reset_reset, pio_led:reset_n, seg7:s_reset, sw:reset_n]
+	wire         rst_controller_002_reset_out_reset;                         // rst_controller_002:reset_out -> [cpu_pheripheral_bridge:m0_reset, final_audio:reset_n, i2c_scl:reset_n, i2c_sda:reset_n, init_audio:reset_n, irq_synchronizer:receiver_reset, irq_synchronizer_001:receiver_reset, key:reset_n, mm_interconnect_1:cpu_pheripheral_bridge_m0_reset_reset_bridge_in_reset_reset, pio_led:reset_n, seg7:s_reset, sw:reset_n]
 	wire         rst_controller_003_reset_out_reset;                         // rst_controller_003:reset_out -> [cpu_pheripheral_bridge:s0_reset, jtag_uart:rst_n, mm_interconnect_0:jtag_uart_reset_reset_bridge_in_reset_reset, onchip_memory2:reset, rst_translator:in_reset, sdram:reset_n, sysid_qsys:reset_n, timer:reset_n]
 	wire         rst_controller_003_reset_out_reset_req;                     // rst_controller_003:reset_req -> [onchip_memory2:reset_req, rst_translator:reset_req_in]
 	wire         rst_controller_004_reset_out_reset;                         // rst_controller_004:reset_out -> [irq_mapper:reset, irq_synchronizer:sender_reset, irq_synchronizer_001:sender_reset, mm_interconnect_0:nios2_gen2_0_reset_reset_bridge_in_reset_reset, nios2_gen2_0:reset_n, rst_translator_001:in_reset]
@@ -215,6 +224,14 @@ module audio_feed (
 		.m0_debugaccess   (cpu_pheripheral_bridge_m0_debugaccess)                      //         .debugaccess
 	);
 
+	audio_feed_final_audio final_audio (
+		.clk      (pll_outclk2_clk),                           //                 clk.clk
+		.reset_n  (~rst_controller_002_reset_out_reset),       //               reset.reset_n
+		.address  (mm_interconnect_1_final_audio_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_1_final_audio_s1_readdata), //                    .readdata
+		.in_port  (final_audio_external_connection_export)     // external_connection.export
+	);
+
 	audio_feed_i2c_scl i2c_scl (
 		.clk        (pll_outclk2_clk),                         //                 clk.clk
 		.reset_n    (~rst_controller_002_reset_out_reset),     //               reset.reset_n
@@ -235,6 +252,17 @@ module audio_feed (
 		.chipselect (mm_interconnect_1_i2c_sda_s1_chipselect), //                    .chipselect
 		.readdata   (mm_interconnect_1_i2c_sda_s1_readdata),   //                    .readdata
 		.bidir_port (i2c_sda_external_connection_export)       // external_connection.export
+	);
+
+	audio_feed_init_audio init_audio (
+		.clk        (pll_outclk2_clk),                            //                 clk.clk
+		.reset_n    (~rst_controller_002_reset_out_reset),        //               reset.reset_n
+		.address    (mm_interconnect_1_init_audio_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_1_init_audio_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_1_init_audio_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_1_init_audio_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_1_init_audio_s1_readdata),   //                    .readdata
+		.out_port   (init_audio_external_connection_export)       // external_connection.export
 	);
 
 	audio_feed_jtag_uart jtag_uart (
@@ -480,6 +508,8 @@ module audio_feed (
 		.cpu_pheripheral_bridge_m0_write                             (cpu_pheripheral_bridge_m0_write),               //                                                      .write
 		.cpu_pheripheral_bridge_m0_writedata                         (cpu_pheripheral_bridge_m0_writedata),           //                                                      .writedata
 		.cpu_pheripheral_bridge_m0_debugaccess                       (cpu_pheripheral_bridge_m0_debugaccess),         //                                                      .debugaccess
+		.final_audio_s1_address                                      (mm_interconnect_1_final_audio_s1_address),      //                                        final_audio_s1.address
+		.final_audio_s1_readdata                                     (mm_interconnect_1_final_audio_s1_readdata),     //                                                      .readdata
 		.i2c_scl_s1_address                                          (mm_interconnect_1_i2c_scl_s1_address),          //                                            i2c_scl_s1.address
 		.i2c_scl_s1_write                                            (mm_interconnect_1_i2c_scl_s1_write),            //                                                      .write
 		.i2c_scl_s1_readdata                                         (mm_interconnect_1_i2c_scl_s1_readdata),         //                                                      .readdata
@@ -490,6 +520,11 @@ module audio_feed (
 		.i2c_sda_s1_readdata                                         (mm_interconnect_1_i2c_sda_s1_readdata),         //                                                      .readdata
 		.i2c_sda_s1_writedata                                        (mm_interconnect_1_i2c_sda_s1_writedata),        //                                                      .writedata
 		.i2c_sda_s1_chipselect                                       (mm_interconnect_1_i2c_sda_s1_chipselect),       //                                                      .chipselect
+		.init_audio_s1_address                                       (mm_interconnect_1_init_audio_s1_address),       //                                         init_audio_s1.address
+		.init_audio_s1_write                                         (mm_interconnect_1_init_audio_s1_write),         //                                                      .write
+		.init_audio_s1_readdata                                      (mm_interconnect_1_init_audio_s1_readdata),      //                                                      .readdata
+		.init_audio_s1_writedata                                     (mm_interconnect_1_init_audio_s1_writedata),     //                                                      .writedata
+		.init_audio_s1_chipselect                                    (mm_interconnect_1_init_audio_s1_chipselect),    //                                                      .chipselect
 		.key_s1_address                                              (mm_interconnect_1_key_s1_address),              //                                                key_s1.address
 		.key_s1_write                                                (mm_interconnect_1_key_s1_write),                //                                                      .write
 		.key_s1_readdata                                             (mm_interconnect_1_key_s1_readdata),             //                                                      .readdata
