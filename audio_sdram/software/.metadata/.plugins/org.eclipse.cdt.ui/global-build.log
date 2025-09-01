@@ -1,111 +1,197 @@
-18:38:03 **** Incremental Build of configuration Nios II for project audio_feed_3 ****
+14:22:17 **** Incremental Build of configuration Nios II for project audio_feed_7 ****
 wsl make all 
-Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
-make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
 [BSP build complete]
 Info: Compiling main.c to obj/default/main.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//HAL/inc -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/ -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//HAL/inc -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/ -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
 main.c: In function 'button_monitor_start':
-main.c:181:22: warning: implicit declaration of function 'alt_irq_register'; did you mean 'alt_ic_isr_register'? [-Wimplicit-function-declaration]
-  181 |     if (bSuccess && (alt_irq_register(KEY_IRQ, (void *)pPressedMask, button_monitor_isr) != 0)){
+main.c:185:22: warning: implicit declaration of function 'alt_irq_register'; did you mean 'alt_ic_isr_register'? [-Wimplicit-function-declaration]
+  185 |     if (bSuccess && (alt_irq_register(KEY_IRQ, (void *)pPressedMask, button_monitor_isr) != 0)){
       |                      ^~~~~~~~~~~~~~~~
       |                      alt_ic_isr_register
 main.c: In function 'record_to_play':
-main.c:446:8: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
-  446 |   if(w < WORDS == FALSE){
+main.c:450:8: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  450 |   if(w < WORDS == FALSE){
       |        ^
-main.c:437:11: warning: unused variable 'R_out' [-Wunused-variable]
-  437 |   int16_t R_out = (int16_t)(word_out & 0xFFFF);
+main.c:441:11: warning: unused variable 'R_out' [-Wunused-variable]
+  441 |   int16_t R_out = (int16_t)(word_out & 0xFFFF);
       |           ^~~~~
 main.c: In function 'main':
-main.c:512:12: warning: unused variable 'w_x' [-Wunused-variable]
-  512 |  const int w_x    = 8192;   // ≈0.25
+main.c:556:12: warning: unused variable 'w_x' [-Wunused-variable]
+  556 |  const int w_x    = 8192;   // ≈0.25
       |            ^~~
-main.c:511:12: warning: unused variable 'w_main' [-Wunused-variable]
-  511 |  const int w_main = 26214;  // ≈0.8
+main.c:555:12: warning: unused variable 'w_main' [-Wunused-variable]
+  555 |  const int w_main = 26214;  // ≈0.8
       |            ^~~~~~
-main.c:509:11: warning: unused variable 'offset' [-Wunused-variable]
-  509 |  uint32_t offset = 0;
+main.c:553:11: warning: unused variable 'offset' [-Wunused-variable]
+  553 |  uint32_t offset = 0;
       |           ^~~~~~
-main.c:507:19: warning: unused variable 'value_r' [-Wunused-variable]
-  507 |  alt_u16 value_l, value_r;
+main.c:551:19: warning: unused variable 'value_r' [-Wunused-variable]
+  551 |  alt_u16 value_l, value_r;
       |                   ^~~~~~~
-main.c:507:10: warning: unused variable 'value_l' [-Wunused-variable]
-  507 |  alt_u16 value_l, value_r;
+main.c:551:10: warning: unused variable 'value_l' [-Wunused-variable]
+  551 |  alt_u16 value_l, value_r;
       |          ^~~~~~~
-main.c:506:10: warning: unused variable 'data' [-Wunused-variable]
-  506 |  alt_u32 data;
+main.c:550:10: warning: unused variable 'data' [-Wunused-variable]
+  550 |  alt_u32 data;
       |          ^~~~
-main.c:505:20: warning: unused variable 'ch_left' [-Wunused-variable]
-  505 |  alt_u16 ch_right, ch_left;
+main.c:549:20: warning: unused variable 'ch_left' [-Wunused-variable]
+  549 |  alt_u16 ch_right, ch_left;
       |                    ^~~~~~~
-main.c:505:10: warning: unused variable 'ch_right' [-Wunused-variable]
-  505 |  alt_u16 ch_right, ch_left;
+main.c:549:10: warning: unused variable 'ch_right' [-Wunused-variable]
+  549 |  alt_u16 ch_right, ch_left;
       |          ^~~~~~~~
 At top level:
-main.c:421:13: warning: 'record_to_play' defined but not used [-Wunused-function]
-  421 | static void record_to_play(void){
+main.c:425:13: warning: 'record_to_play' defined but not used [-Wunused-function]
+  425 | static void record_to_play(void){
       |             ^~~~~~~~~~~~~~
-main.c:406:13: warning: 'play_from_sdram' defined but not used [-Wunused-function]
-  406 | static void play_from_sdram(uint32_t words){
+main.c:410:13: warning: 'play_from_sdram' defined but not used [-Wunused-function]
+  410 | static void play_from_sdram(uint32_t words){
       |             ^~~~~~~~~~~~~~~
-main.c:393:17: warning: 'record_to_sdram' defined but not used [-Wunused-function]
-  393 | static uint32_t record_to_sdram(void){
+main.c:397:17: warning: 'record_to_sdram' defined but not used [-Wunused-function]
+  397 | static uint32_t record_to_sdram(void){
       |                 ^~~~~~~~~~~~~~~
-main.c:373:79: warning: 'tick_6' defined but not used [-Wunused-variable]
-  373 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+main.c:377:79: warning: 'tick_6' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
       |                                                                               ^~~~~~
-main.c:373:69: warning: 'tick_5' defined but not used [-Wunused-variable]
-  373 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+main.c:377:69: warning: 'tick_5' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
       |                                                                     ^~~~~~
-main.c:373:47: warning: 'tick_3' defined but not used [-Wunused-variable]
-  373 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+main.c:377:47: warning: 'tick_3' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
       |                                               ^~~~~~
-main.c:373:29: warning: 'tick' defined but not used [-Wunused-variable]
-  373 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+main.c:377:29: warning: 'tick' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
       |                             ^~~~
-main.c:373:23: warning: 'rw' defined but not used [-Wunused-variable]
-  373 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+main.c:377:23: warning: 'rw' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
       |                       ^~
-main.c:373:17: warning: 'lw' defined but not used [-Wunused-variable]
-  373 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+main.c:377:17: warning: 'lw' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
       |                 ^~
-Info: Linking audio_feed_3.elf
-nios2-elf-g++.exe  -T'c:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//linker.x' -msys-crt0='c:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/   -Wl,-Map=audio_feed_3.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o audio_feed_3.elf obj/default/AUDIO.o obj/default/I2C.o obj/default/LED.o obj/default/SEG7.o obj/default/debug.o obj/default/main.o -lm -msys-lib=m
-nios2-elf-insert.exe audio_feed_3.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x5101048 --timestamp 1756140267 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name audio_feed --quartus_project_dir "c:/repos/fpga_dsp/audio_sdram" --jdi ../..//output_files/audio_feed.jdi
-Info: (audio_feed_3.elf) 109 KBytes program size (code + initialized data).
+Info: Linking audio_feed_7.elf
+nios2-elf-g++.exe  -T'c:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//linker.x' -msys-crt0='c:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/   -Wl,-Map=audio_feed_7.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o audio_feed_7.elf obj/default/AUDIO.o obj/default/I2C.o obj/default/LED.o obj/default/SEG7.o obj/default/debug.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe audio_feed_7.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x5101048 --timestamp 1756386196 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name audio_feed --quartus_project_dir "c:/repos/fpga_dsp/audio_sdram" --jdi ../..//output_files/audio_feed.jdi
+Info: (audio_feed_7.elf) 109 KBytes program size (code + initialized data).
 Info:                    65523 KBytes free for stack + heap.
-Info: Creating audio_feed_3.objdump
-nios2-elf-objdump.exe --disassemble --syms --all-header --source audio_feed_3.elf >audio_feed_3.objdump
-[audio_feed_3 build complete]
-18:38:26 **** Build of configuration Nios II for project audio_feed_3 ****
+Info: Creating audio_feed_7.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source audio_feed_7.elf >audio_feed_7.objdump
+[audio_feed_7 build complete]
+14:22:36 **** Build of configuration Nios II for project audio_feed_7 ****
 wsl make all 
-Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
-make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
 [BSP build complete]
-[audio_feed_3 build complete]
-18:38:27 **** Incremental Build of configuration Nios II for project audio_feed_3 ****
+[audio_feed_7 build complete]
+14:22:37 **** Incremental Build of configuration Nios II for project audio_feed_7 ****
 wsl make all 
-Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
-make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
 [BSP build complete]
-[audio_feed_3 build complete]
-18:51:08 **** Build of configuration Nios II for project audio_feed_3 ****
+[audio_feed_7 build complete]
+14:25:43 **** Build of configuration Nios II for project audio_feed_7 ****
 wsl make all 
-Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
-make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
 [BSP build complete]
-[audio_feed_3 build complete]
-18:51:09 **** Incremental Build of configuration Nios II for project audio_feed_3 ****
+[audio_feed_7 build complete]
+14:25:46 **** Incremental Build of configuration Nios II for project audio_feed_7 ****
 wsl make all 
-Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
-make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
 [BSP build complete]
-[audio_feed_3 build complete]
-18:51:41 **** Clean-only build of configuration Nios II for project audio_feed_3 ****
+[audio_feed_7 build complete]
+16:51:21 **** Build of configuration Nios II for project audio_feed_7 ****
+wsl make all 
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//HAL/inc -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/ -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+main.c: In function 'button_monitor_start':
+main.c:185:22: warning: implicit declaration of function 'alt_irq_register'; did you mean 'alt_ic_isr_register'? [-Wimplicit-function-declaration]
+Info: Linking audio_feed_7.elf
+  185 |     if (bSuccess && (alt_irq_register(KEY_IRQ, (void *)pPressedMask, button_monitor_isr) != 0)){
+nios2-elf-g++.exe  -T'c:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//linker.x' -msys-crt0='c:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/   -Wl,-Map=audio_feed_7.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o audio_feed_7.elf obj/default/AUDIO.o obj/default/I2C.o obj/default/LED.o obj/default/SEG7.o obj/default/debug.o obj/default/main.o -lm -msys-lib=m
+      |                      ^~~~~~~~~~~~~~~~
+      |                      alt_ic_isr_register
+main.c: In function 'record_to_play':
+main.c:450:8: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  450 |   if(w < WORDS == FALSE){
+      |        ^
+main.c:441:11: warning: unused variable 'R_out' [-Wunused-variable]
+  441 |   int16_t R_out = (int16_t)(word_out & 0xFFFF);
+      |           ^~~~~
+main.c: In function 'main':
+main.c:556:12: warning: unused variable 'w_x' [-Wunused-variable]
+  556 |  const int w_x    = 8192;   // ≈0.25
+      |            ^~~
+main.c:555:12: warning: unused variable 'w_main' [-Wunused-variable]
+  555 |  const int w_main = 26214;  // ≈0.8
+      |            ^~~~~~
+main.c:553:11: warning: unused variable 'offset' [-Wunused-variable]
+  553 |  uint32_t offset = 0;
+      |           ^~~~~~
+main.c:551:19: warning: unused variable 'value_r' [-Wunused-variable]
+  551 |  alt_u16 value_l, value_r;
+      |                   ^~~~~~~
+main.c:551:10: warning: unused variable 'value_l' [-Wunused-variable]
+  551 |  alt_u16 value_l, value_r;
+      |          ^~~~~~~
+main.c:550:10: warning: unused variable 'data' [-Wunused-variable]
+  550 |  alt_u32 data;
+      |          ^~~~
+main.c:549:20: warning: unused variable 'ch_left' [-Wunused-variable]
+  549 |  alt_u16 ch_right, ch_left;
+      |                    ^~~~~~~
+main.c:549:10: warning: unused variable 'ch_right' [-Wunused-variable]
+  549 |  alt_u16 ch_right, ch_left;
+      |          ^~~~~~~~
+At top level:
+main.c:425:13: warning: 'record_to_play' defined but not used [-Wunused-function]
+  425 | static void record_to_play(void){
+      |             ^~~~~~~~~~~~~~
+main.c:410:13: warning: 'play_from_sdram' defined but not used [-Wunused-function]
+  410 | static void play_from_sdram(uint32_t words){
+      |             ^~~~~~~~~~~~~~~
+main.c:397:17: warning: 'record_to_sdram' defined but not used [-Wunused-function]
+  397 | static uint32_t record_to_sdram(void){
+      |                 ^~~~~~~~~~~~~~~
+main.c:377:79: warning: 'tick_6' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+      |                                                                               ^~~~~~
+main.c:377:69: warning: 'tick_5' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+      |                                                                     ^~~~~~
+main.c:377:47: warning: 'tick_3' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+      |                                               ^~~~~~
+main.c:377:29: warning: 'tick' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+      |                             ^~~~
+main.c:377:23: warning: 'rw' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+      |                       ^~
+main.c:377:17: warning: 'lw' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+      |                 ^~
+nios2-elf-insert.exe audio_feed_7.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x5101048 --timestamp 1756386196 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name audio_feed --quartus_project_dir "c:/repos/fpga_dsp/audio_sdram" --jdi ../..//output_files/audio_feed.jdi
+Info: (audio_feed_7.elf) 109 KBytes program size (code + initialized data).
+Info:                    65523 KBytes free for stack + heap.
+Info: Creating audio_feed_7.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source audio_feed_7.elf >audio_feed_7.objdump
+[audio_feed_7 build complete]
+16:51:37 **** Incremental Build of configuration Nios II for project audio_feed_7 ****
+wsl make all 
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+[BSP build complete]
+[audio_feed_7 build complete]
+13:49:28 **** Clean-only build of configuration Nios II for project audio_feed_7 ****
 wsl make clean 
-[audio_feed_3 clean complete]
-18:51:42 **** Incremental Build of configuration Nios II for project audio_feed ****
+[audio_feed_7 clean complete]
+13:49:33 **** Build of configuration Nios II for project audio_feed ****
 wsl make all 
 Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_bsp/
 make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_bsp/
@@ -125,38 +211,267 @@ Makefile:555: recipe for target 'public.mk' failed
 make[1]: *** [public.mk] Error 1
 Makefile:846: recipe for target '/mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_bsp/-recurs-make-lib' failed
 make: *** [/mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_bsp/-recurs-make-lib] Error 2
-18:51:43 **** Build of configuration Nios II for project audio_feed_3 ****
+13:49:34 **** Build of configuration Nios II for project audio_feed_3 ****
 wsl make all 
 Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
 make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
+Makefile not up to date.
+/mnt/c/repos/fpga_dsp/audio_sdram/audio_feed.sopcinfo has been modified since the BSP was generated.
+
+Generate the BSP to update the Makefile, and then build again.
+
+To generate from Eclipse:
+ 1. Right-click the BSP project.
+ 2. In the Nios II Menu, click Generate BSP.
+
+To generate from the command line:
+ nios2-bsp-generate-files --settings=<settings file> --bsp-dir=<target bsp files directory>
+
+Makefile:555: recipe for target 'public.mk' failed
+make[1]: *** [public.mk] Error 1
+Makefile:846: recipe for target '/mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/-recurs-make-lib' failed
+make: *** [/mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/-recurs-make-lib] Error 2
+13:49:35 **** Build of configuration Nios II for project audio_feed_3_bsp ****
+wsl make all 
+Makefile not up to date.
+/mnt/c/repos/fpga_dsp/audio_sdram/audio_feed.sopcinfo has been modified since the BSP was generated.
+
+Generate the BSP to update the Makefile, and then build again.
+
+To generate from Eclipse:
+ 1. Right-click the BSP project.
+ 2. In the Nios II Menu, click Generate BSP.
+
+To generate from the command line:
+ nios2-bsp-generate-files --settings=<settings file> --bsp-dir=<target bsp files directory>
+
+Makefile:555: recipe for target 'public.mk' failed
+make: *** [public.mk] Error 1
+13:49:36 **** Build of configuration Nios II for project audio_feed_4 ****
+wsl make all 
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_4_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_4_bsp/
+Makefile not up to date.
+/mnt/c/repos/fpga_dsp/audio_sdram/audio_feed.sopcinfo has been modified since the BSP was generated.
+
+Generate the BSP to update the Makefile, and then build again.
+
+To generate from Eclipse:
+ 1. Right-click the BSP project.
+ 2. In the Nios II Menu, click Generate BSP.
+
+To generate from the command line:
+ nios2-bsp-generate-files --settings=<settings file> --bsp-dir=<target bsp files directory>
+
+Makefile:555: recipe for target 'public.mk' failed
+make[1]: *** [public.mk] Error 1
+Makefile:846: recipe for target '/mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_4_bsp/-recurs-make-lib' failed
+make: *** [/mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_4_bsp/-recurs-make-lib] Error 2
+13:49:36 **** Build of configuration Nios II for project audio_feed_4_bsp ****
+wsl make all 
+Makefile not up to date.
+/mnt/c/repos/fpga_dsp/audio_sdram/audio_feed.sopcinfo has been modified since the BSP was generated.
+
+Generate the BSP to update the Makefile, and then build again.
+
+To generate from Eclipse:
+ 1. Right-click the BSP project.
+ 2. In the Nios II Menu, click Generate BSP.
+
+To generate from the command line:
+ nios2-bsp-generate-files --settings=<settings file> --bsp-dir=<target bsp files directory>
+
+Makefile:555: recipe for target 'public.mk' failed
+make: *** [public.mk] Error 1
+13:49:37 **** Build of configuration Nios II for project audio_feed_5 ****
+wsl make all 
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_5_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_5_bsp/
+Makefile not up to date.
+/mnt/c/repos/fpga_dsp/audio_sdram/audio_feed.sopcinfo has been modified since the BSP was generated.
+
+Generate the BSP to update the Makefile, and then build again.
+
+To generate from Eclipse:
+ 1. Right-click the BSP project.
+ 2. In the Nios II Menu, click Generate BSP.
+
+To generate from the command line:
+ nios2-bsp-generate-files --settings=<settings file> --bsp-dir=<target bsp files directory>
+
+Makefile:555: recipe for target 'public.mk' failed
+make[1]: *** [public.mk] Error 1
+Makefile:846: recipe for target '/mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_5_bsp/-recurs-make-lib' failed
+make: *** [/mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_5_bsp/-recurs-make-lib] Error 2
+13:49:37 **** Build of configuration Nios II for project audio_feed_5_bsp ****
+wsl make all 
+Makefile not up to date.
+/mnt/c/repos/fpga_dsp/audio_sdram/audio_feed.sopcinfo has been modified since the BSP was generated.
+
+Generate the BSP to update the Makefile, and then build again.
+
+To generate from Eclipse:
+ 1. Right-click the BSP project.
+ 2. In the Nios II Menu, click Generate BSP.
+
+To generate from the command line:
+ nios2-bsp-generate-files --settings=<settings file> --bsp-dir=<target bsp files directory>
+
+Makefile:555: recipe for target 'public.mk' failed
+make: *** [public.mk] Error 1
+13:49:38 **** Build of configuration Nios II for project audio_feed_6 ****
+wsl make all 
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_6_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_6_bsp/
+Makefile not up to date.
+/mnt/c/repos/fpga_dsp/audio_sdram/audio_feed.sopcinfo has been modified since the BSP was generated.
+
+Generate the BSP to update the Makefile, and then build again.
+
+To generate from Eclipse:
+ 1. Right-click the BSP project.
+ 2. In the Nios II Menu, click Generate BSP.
+
+To generate from the command line:
+ nios2-bsp-generate-files --settings=<settings file> --bsp-dir=<target bsp files directory>
+
+Makefile:555: recipe for target 'public.mk' failed
+make[1]: *** [public.mk] Error 1
+Makefile:846: recipe for target '/mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_6_bsp/-recurs-make-lib' failed
+make: *** [/mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_6_bsp/-recurs-make-lib] Error 2
+13:49:38 **** Build of configuration Nios II for project audio_feed_6_bsp ****
+wsl make all 
+Makefile not up to date.
+/mnt/c/repos/fpga_dsp/audio_sdram/audio_feed.sopcinfo has been modified since the BSP was generated.
+
+Generate the BSP to update the Makefile, and then build again.
+
+To generate from Eclipse:
+ 1. Right-click the BSP project.
+ 2. In the Nios II Menu, click Generate BSP.
+
+To generate from the command line:
+ nios2-bsp-generate-files --settings=<settings file> --bsp-dir=<target bsp files directory>
+
+Makefile:555: recipe for target 'public.mk' failed
+make: *** [public.mk] Error 1
+13:49:39 **** Build of configuration Nios II for project audio_feed_7 ****
+wsl make all 
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
 [BSP build complete]
 Info: Compiling AUDIO.c to obj/default/AUDIO.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//HAL/inc -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/ -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/AUDIO.o AUDIO.c
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//HAL/inc -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/ -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/AUDIO.o AUDIO.c
 Info: Compiling I2C.c to obj/default/I2C.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//HAL/inc -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/ -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/I2C.o I2C.c
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//HAL/inc -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/ -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/I2C.o I2C.c
 Info: Compiling LED.c to obj/default/LED.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//HAL/inc -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/ -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/LED.o LED.c
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//HAL/inc -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/ -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/LED.o LED.c
 Info: Compiling SEG7.c to obj/default/SEG7.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//HAL/inc -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/ -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/SEG7.o SEG7.c
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//HAL/inc -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/ -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/SEG7.o SEG7.c
 Info: Compiling debug.c to obj/default/debug.o
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//HAL/inc -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/ -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/debug.o debug.c
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//HAL/inc -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/ -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/debug.o debug.c
 debug.c: In function 'myprintf_hex_array':
 debug.c:72:17: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-Info: Compiling main.c to obj/default/main.o
    72 |         sprintf(szText, "[%02X]", *(pHex+i));
-nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//HAL/inc -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/ -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
-Info: Linking audio_feed_3.elf
       |                 ^~~~~~
       |                 |
       |                 unsigned char *
 In file included from debug.c:32:
 c:\intelfpga_lite\20.1\nios2eds\bin\gnu\h-x86_64-mingw32\nios2-elf\include\stdio.h:244:14: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+Info: Compiling main.c to obj/default/main.o
   244 | int sprintf (char *__restrict, const char *__restrict, ...)
+nios2-elf-gcc.exe -xc -MP -MMD -c -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//HAL/inc -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/ -Ic:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
       |              ^
-18:51:47 **** Incremental Build of configuration Nios II for project audio_feed_3_bsp ****
+In file included from my_includes.h:53,
+                 from debug.c:34:
+debug.c:73:16: warning: pointer targets in passing argument 1 of 'myprintf' differ in signedness [-Wpointer-sign]
+   73 |         DEBUG((szText));
+      |                ^~~~~~
+      |                |
+      |                unsigned char *
+debug.h:47:42: note: in definition of macro 'DEBUG'
+   47 | #define DEBUG(x)               {myprintf x;}  // standard in/out, specifed in project (it could be uart, jtag, or lcd)
+      |                                          ^
+debug.c:53:20: note: expected 'char *' but argument is of type 'unsigned char *'
+   53 | int myprintf(char *format, ...){
+      |              ~~~~~~^~~~~~
+main.c: In function 'button_monitor_start':
+main.c:185:22: warning: implicit declaration of function 'alt_irq_register'; did you mean 'alt_ic_isr_register'? [-Wimplicit-function-declaration]
+  185 |     if (bSuccess && (alt_irq_register(KEY_IRQ, (void *)pPressedMask, button_monitor_isr) != 0)){
+      |                      ^~~~~~~~~~~~~~~~
+      |                      alt_ic_isr_register
+main.c: In function 'record_to_play':
+main.c:450:8: warning: suggest parentheses around comparison in operand of '==' [-Wparentheses]
+  450 |   if(w < WORDS == FALSE){
+      |        ^
+main.c:441:11: warning: unused variable 'R_out' [-Wunused-variable]
+  441 |   int16_t R_out = (int16_t)(word_out & 0xFFFF);
+      |           ^~~~~
+main.c: In function 'main':
+main.c:556:12: warning: unused variable 'w_x' [-Wunused-variable]
+  556 |  const int w_x    = 8192;   // ≈0.25
+      |            ^~~
+main.c:555:12: warning: unused variable 'w_main' [-Wunused-variable]
+  555 |  const int w_main = 26214;  // ≈0.8
+      |            ^~~~~~
+main.c:553:11: warning: unused variable 'offset' [-Wunused-variable]
+  553 |  uint32_t offset = 0;
+      |           ^~~~~~
+main.c:551:19: warning: unused variable 'value_r' [-Wunused-variable]
+  551 |  alt_u16 value_l, value_r;
+      |                   ^~~~~~~
+main.c:551:10: warning: unused variable 'value_l' [-Wunused-variable]
+  551 |  alt_u16 value_l, value_r;
+      |          ^~~~~~~
+main.c:550:10: warning: unused variable 'data' [-Wunused-variable]
+  550 |  alt_u32 data;
+      |          ^~~~
+main.c:549:20: warning: unused variable 'ch_left' [-Wunused-variable]
+  549 |  alt_u16 ch_right, ch_left;
+      |                    ^~~~~~~
+main.c:549:10: warning: unused variable 'ch_right' [-Wunused-variable]
+  549 |  alt_u16 ch_right, ch_left;
+      |          ^~~~~~~~
+At top level:
+main.c:425:13: warning: 'record_to_play' defined but not used [-Wunused-function]
+  425 | static void record_to_play(void){
+      |             ^~~~~~~~~~~~~~
+main.c:410:13: warning: 'play_from_sdram' defined but not used [-Wunused-function]
+  410 | static void play_from_sdram(uint32_t words){
+      |             ^~~~~~~~~~~~~~~
+main.c:397:17: warning: 'record_to_sdram' defined but not used [-Wunused-function]
+  397 | static uint32_t record_to_sdram(void){
+      |                 ^~~~~~~~~~~~~~~
+main.c:377:79: warning: 'tick_6' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+      |                                                                               ^~~~~~
+main.c:377:69: warning: 'tick_5' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+      |                                                                     ^~~~~~
+main.c:377:47: warning: 'tick_3' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+      |                                               ^~~~~~
+main.c:377:29: warning: 'tick' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+      |                             ^~~~
+main.c:377:23: warning: 'rw' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+      |                       ^~
+main.c:377:17: warning: 'lw' defined but not used [-Wunused-variable]
+  377 | static uint32_t lw=0, rw=0, tick=0, tick_2=0, tick_3=0, tick_4 = 0, tick_5=0, tick_6=0;
+      |                 ^~
+Info: Linking audio_feed_7.elf
+nios2-elf-g++.exe  -T'c:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//linker.x' -msys-crt0='c:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -Lc:/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/   -Wl,-Map=audio_feed_7.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o audio_feed_7.elf obj/default/AUDIO.o obj/default/I2C.o obj/default/LED.o obj/default/SEG7.o obj/default/debug.o obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert.exe audio_feed_7.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x5101048 --timestamp 1756386196 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name audio_feed --quartus_project_dir "c:/repos/fpga_dsp/audio_sdram" --jdi ../..//output_files/audio_feed.jdi
+Info: (audio_feed_7.elf) 109 KBytes program size (code + initialized data).
+Info:                    65523 KBytes free for stack + heap.
+Info: Creating audio_feed_7.objdump
+nios2-elf-objdump.exe --disassemble --syms --all-header --source audio_feed_7.elf >audio_feed_7.objdump
+[audio_feed_7 build complete]
+13:49:45 **** Build of configuration Nios II for project audio_feed_7_bsp ****
 wsl make all 
 [BSP build complete]
-18:51:47 **** Incremental Build of configuration Nios II for project audio_feed_bsp ****
+13:49:45 **** Build of configuration Nios II for project audio_feed_bsp ****
 wsl make all 
 Makefile not up to date.
 /mnt/c/repos/fpga_pedal/audio_sdram/audio_feed.sopcinfo has been modified since the BSP was generated.
@@ -172,15 +487,39 @@ To generate from the command line:
 
 Makefile:555: recipe for target 'public.mk' failed
 make: *** [public.mk] Error 1
-18:52:04 **** Build of configuration Nios II for project audio_feed_3 ****
+13:55:47 **** Build of configuration Nios II for project audio_feed_7 ****
 wsl make all 
-Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
-make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
 [BSP build complete]
-[audio_feed_3 build complete]
-18:52:05 **** Incremental Build of configuration Nios II for project audio_feed_3 ****
+[audio_feed_7 build complete]
+13:56:13 **** Incremental Build of configuration Nios II for project audio_feed_7 ****
 wsl make all 
-Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
-make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_3_bsp/
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
 [BSP build complete]
-[audio_feed_3 build complete]
+[audio_feed_7 build complete]
+14:24:14 **** Build of configuration Nios II for project audio_feed_7 ****
+wsl make all 
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+[BSP build complete]
+[audio_feed_7 build complete]
+14:24:16 **** Incremental Build of configuration Nios II for project audio_feed_7 ****
+wsl make all 
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+[BSP build complete]
+[audio_feed_7 build complete]
+16:29:11 **** Build of configuration Nios II for project audio_feed_7 ****
+wsl make all 
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+[BSP build complete]
+[audio_feed_7 build complete]
+16:29:12 **** Incremental Build of configuration Nios II for project audio_feed_7 ****
+wsl make all 
+Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_7_bsp/
+[BSP build complete]
+[audio_feed_7 build complete]

@@ -180,6 +180,68 @@ wire 								HEX5P;
 //  Structural coding
 //=======================================================
 
+reg signed [15:0] [0:38] taps  = { 16'h 00C4,
+                                   16'h FF6E,
+                                   16'h FE02,
+                                   16'h FE6B,
+                                   16'h 00B6,
+                                   16'h 0181,
+                                   16'h FF39,
+                                   16'h FD9F,
+                                   16'h 002B,
+                                   16'h 0334,
+                                   16'h 00DF,
+                                   16'h FBEE,
+                                   16'h FD5B,
+                                   16'h 04D9,
+                                   16'h 05AE,
+                                   16'h FA86,
+                                   16'h F3FC,
+                                   16'h 05E2,
+                                   16'h 2835,
+                                   16'h 39FB,
+                                   16'h 2835,
+                                   16'h 05E2,
+                                   16'h F3FC,
+                                   16'h FA86,
+                                   16'h 05AE,
+                                   16'h 04D9,
+                                   16'h FD5B,
+                                   16'h FBEE,
+                                   16'h 00DF,
+                                   16'h 0334,
+                                   16'h 002B,
+                                   16'h FD9F,
+                                   16'h FF39,
+                                   16'h 0181,
+                                   16'h 00B6,
+                                   16'h FE6B,
+                                   16'h FE02,
+                                   16'h FF6E,
+                                   16'h 00C4};
+
+reg signed [15:0] [0:8] coeff  = { 16'h 04F6,
+                                  16'h 0AE4,
+                                  16'h 1089,
+                                  16'h 1496,
+                                  16'h 160F,
+                                  16'h 1496,
+                                  16'h 1089,
+                                  16'h 0AE4,
+                                  16'h 04F6};
+											 
+localparam int N = 39;
+localparam logic signed [N*16-1:0] COEFFS39 = {
+  16'sh00C4, 16'shFF6E, 16'shFE02, 16'shFE6B, 16'sh00B6,
+  16'sh0181, 16'shFF39, 16'shFD9F, 16'sh002B, 16'sh0334,
+  16'sh00DF, 16'shFBEE, 16'shFD5B, 16'sh04D9, 16'sh05AE,
+  16'shFA86, 16'shF3FC, 16'sh05E2, 16'sh2835, 16'sh39FB,
+  16'sh2835, 16'sh05E2, 16'shF3FC, 16'shFA86, 16'sh05AE,
+  16'sh04D9, 16'shFD5B, 16'shFBEE, 16'sh00DF, 16'sh0334,
+  16'sh002B, 16'shFD9F, 16'shFF39, 16'sh0181, 16'sh00B6,
+  16'shFE6B, 16'shFE02, 16'shFF6E, 16'sh00C4
+};
+
 
 wire reset_n;
 
@@ -187,13 +249,56 @@ assign reset_n = 1'b1;
 
 wire [15:0] init_audio;
 wire [15:0] final_audio;
+wire [15:0] final_audio_2;
+wire [15:0] final_audio_3;
+wire [15:0] final_audio_4;
 
+// ===================== 48 kHz CE from LRCLK =====================
+// Sync AUD_DACLRC (or AUD_ADCLRCK) into CLOCK_50 and make a 1-cycle pulse at 48 kHz.
+reg [2:0] lr_sync;
+always @(posedge CLOCK_50) lr_sync <= {lr_sync[1:0], AUD_DACLRCK};  // or AUD_ADCLRCK
+wire ce_48k = (lr_sync[2:1] == 2'b01);  // rising-edge pulse @ ~48 kHz
 
-	processor test1(
-		.clk(CLOCK_50),
-		.input_sig(init_audio),
-		.output_sig(final_audio)
-	);
+// ===================== FINAL AUDIO PATHS ========================
+
+// 1) final_audio — always pass-through @ CLOCK_50
+reg [15:0] final_audio_r;
+always @(posedge CLOCK_50) begin
+  final_audio_r <= init_audio;
+end
+assign final_audio = final_audio_r;
+
+// 2) final_audio_2 — pass-through only on 48 kHz CE
+reg [15:0] final_audio_2_r;
+always @(posedge CLOCK_50) begin
+  if (ce_48k) final_audio_2_r <= init_audio;
+end
+assign final_audio_2 = final_audio_2_r;
+
+// 3) final_audio_3 — distortion, stepped by 48 kHz CE
+//    Add a CE to the distortion module (see CE-enabled version below)
+wire [15:0] distortion_out;
+distortion_ce hopeful (
+  .clk        (CLOCK_50),
+  .ce         (ce_48k),
+  .input_sig  (init_audio),
+  .output_sig (distortion_out)
+);
+assign final_audio_3 = distortion_out;
+
+// 4) final_audio_4 — filter 'filt' stepped by 48 kHz CE
+//    Use a CE-enabled wrapper of your 'filter' (same algorithm, just gated)
+wire [15:0] filt_out;  // downsize to 16 here; adjust if you want more headroom
+// Transposed form
+new_fir_transposed_flat #(.N(39), .DATA_W(16), .COEF_W(16)) u_fir (
+  .clk    (CLOCK_50),
+  .ce     (ce_48k),
+  .x_in   (init_audio),
+  .coeffs_flat (TAPSS),          // <-- just wire the array
+  .y_out  (filt_out)
+);
+// simple truncation; replace with rounding/saturation as you like
+assign final_audio_4 = filt_out[15:0];  // keep 16 MSBs
 
 	audio_feed u0 (
 		.clk_clk                            (CLOCK_50),                            //                         clk.clk
@@ -229,9 +334,13 @@ wire [15:0] final_audio;
 		.audio_conduit_end_BCLK             (AUD_BCLK),             //                            .BCLK
 //		.altpll_audio_locked_export         (<connected-to-altpll_audio_locked_export>)          //         altpll_audio_locked.export
 		.init_audio_external_connection_export  (init_audio),  //  init_audio_external_connection.export
-		.final_audio_external_connection_export (final_audio)  // final_audio_external_connection.export
+		.final_audio_external_connection_export (final_audio),  // final_audio_external_connection.export
+		.audio_clock_export_clk                 (clk_18432),
+		.final_audio_3_external_connection_export (final_audio_2), // final_audio_3_external_connection.export
+		.final_audio_2_external_connection_export (final_audio_3), // final_audio_2_external_connection.export
+		.final_audio_4_external_connection_export (final_audio_4)  // final_audio_4_external_connection.export
 	);
 	
-
+	
 	
 endmodule

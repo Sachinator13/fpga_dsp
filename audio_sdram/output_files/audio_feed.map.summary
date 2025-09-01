@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Mon Aug 25 18:47:44 2025
+Analysis & Synthesis Status : Successful - Fri Aug 29 16:26:01 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : audio_feed
 Top-level Entity Name : audio_sdram
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2657
+Total registers : 2887
 Total pins : 241
 Total virtual pins : 0
 Total block memory bits : 2,589,568
-Total DSP Blocks : 0
+Total DSP Blocks : 21
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

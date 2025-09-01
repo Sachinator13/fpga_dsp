@@ -1,4 +1,4 @@
-18:51:42 **** Incremental Build of configuration Nios II for project audio_feed ****
+13:49:33 **** Build of configuration Nios II for project audio_feed ****
 wsl make all 
 Info: Building /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_bsp/
 make --no-print-directory -C /mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_bsp/
@@ -19,5 +19,5 @@ make[1]: *** [public.mk] Error 1
 Makefile:846: recipe for target '/mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_bsp/-recurs-make-lib' failed
 make: *** [/mnt/c/repos/fpga_dsp/audio_sdram/software/audio_feed_bsp/-recurs-make-lib] Error 2
 
-18:51:43 Build Finished (took 906ms)
+13:49:34 Build Finished (took 691ms)
 

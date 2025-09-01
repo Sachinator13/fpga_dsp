@@ -77,9 +77,72 @@
    }
    element final_audio.s1
    {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
       datum baseAddress
       {
          value = "112";
+         type = "String";
+      }
+   }
+   element final_audio_2
+   {
+      datum _sortIndex
+      {
+         value = "19";
+         type = "int";
+      }
+   }
+   element final_audio_2.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "160";
+         type = "String";
+      }
+   }
+   element final_audio_3
+   {
+      datum _sortIndex
+      {
+         value = "20";
+         type = "int";
+      }
+   }
+   element final_audio_3.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "144";
+         type = "String";
+      }
+   }
+   element final_audio_4
+   {
+      datum _sortIndex
+      {
+         value = "21";
+         type = "int";
+      }
+   }
+   element final_audio_4.s1
+   {
+      datum baseAddress
+      {
+         value = "176";
          type = "String";
       }
    }
@@ -135,6 +198,11 @@
    }
    element init_audio.s1
    {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
       datum baseAddress
       {
          value = "128";
@@ -386,11 +454,31 @@
    type="conduit"
    dir="end" />
  <interface
+   name="audio_clock_export"
+   internal="altpll_audio.outclk1"
+   type="clock"
+   dir="start" />
+ <interface
    name="audio_conduit_end"
    internal="audio.conduit_end"
    type="conduit"
    dir="end" />
  <interface name="clk" internal="clk_50.clk_in" type="clock" dir="end" />
+ <interface
+   name="final_audio_2_external_connection"
+   internal="final_audio_2.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="final_audio_3_external_connection"
+   internal="final_audio_3.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="final_audio_4_external_connection"
+   internal="final_audio_4.external_connection"
+   type="conduit"
+   dir="end" />
  <interface
    name="final_audio_external_connection"
    internal="final_audio.external_connection"
@@ -552,10 +640,10 @@
   <parameter name="gui_fractional_cout" value="32" />
   <parameter name="gui_mif_generate" value="false" />
   <parameter name="gui_multiply_factor" value="1" />
-  <parameter name="gui_number_of_clocks" value="1" />
+  <parameter name="gui_number_of_clocks" value="2" />
   <parameter name="gui_operation_mode" value="normal" />
   <parameter name="gui_output_clock_frequency0" value="18.432" />
-  <parameter name="gui_output_clock_frequency1" value="100.0" />
+  <parameter name="gui_output_clock_frequency1" value="18.432" />
   <parameter name="gui_output_clock_frequency10" value="100.0" />
   <parameter name="gui_output_clock_frequency11" value="100.0" />
   <parameter name="gui_output_clock_frequency12" value="100.0" />
@@ -680,6 +768,60 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="16" />
  </module>
+ <module
+   name="final_audio_2"
+   kind="altera_avalon_pio"
+   version="20.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="10000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="16" />
+ </module>
+ <module
+   name="final_audio_3"
+   kind="altera_avalon_pio"
+   version="20.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="10000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="16" />
+ </module>
+ <module
+   name="final_audio_4"
+   kind="altera_avalon_pio"
+   version="20.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="10000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="16" />
+ </module>
  <module name="i2c_scl" kind="altera_avalon_pio" version="20.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -760,8 +902,8 @@
    kind="altera_nios2_gen2"
    version="20.1"
    enabled="1">
-  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="6" />
-  <parameter name="AUTO_CLK_RESET_DOMAIN" value="6" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="7" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="7" />
   <parameter name="AUTO_DEVICE" value="5CSEMA5F31C6" />
   <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
   <parameter name="bht_ramBlockType" value="Automatic" />
@@ -779,7 +921,7 @@
   <parameter name="dataAddrWidth" value="27" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram.s1' start='0x0' end='0x4000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='seg7.avalon_slave' start='0x4000000' end='0x4000020' type='SEG7_IF.avalon_slave' /><slave name='key.s1' start='0x4000020' end='0x4000030' type='altera_avalon_pio.s1' /><slave name='i2c_sda.s1' start='0x4000030' end='0x4000040' type='altera_avalon_pio.s1' /><slave name='i2c_scl.s1' start='0x4000040' end='0x4000050' type='altera_avalon_pio.s1' /><slave name='sw.s1' start='0x4000050' end='0x4000060' type='altera_avalon_pio.s1' /><slave name='pio_led.s1' start='0x4000060' end='0x4000070' type='altera_avalon_pio.s1' /><slave name='final_audio.s1' start='0x4000070' end='0x4000080' type='altera_avalon_pio.s1' /><slave name='init_audio.s1' start='0x4000080' end='0x4000090' type='altera_avalon_pio.s1' /><slave name='onchip_memory2.s1' start='0x5080000' end='0x50CE200' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x5100800' end='0x5101000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='audio.avalon_slave' start='0x5101000' end='0x5101020' type='AUDIO_IF.avalon_slave' /><slave name='timer.s1' start='0x5101020' end='0x5101040' type='altera_avalon_timer.s1' /><slave name='jtag_uart.avalon_jtag_slave' start='0x5101040' end='0x5101048' type='altera_avalon_jtag_uart.avalon_jtag_slave' /><slave name='sysid_qsys.control_slave' start='0x5101048' end='0x5101050' type='altera_avalon_sysid_qsys.control_slave' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram.s1' start='0x0' end='0x4000000' type='altera_avalon_new_sdram_controller.s1' /><slave name='seg7.avalon_slave' start='0x4000000' end='0x4000020' type='SEG7_IF.avalon_slave' /><slave name='key.s1' start='0x4000020' end='0x4000030' type='altera_avalon_pio.s1' /><slave name='i2c_sda.s1' start='0x4000030' end='0x4000040' type='altera_avalon_pio.s1' /><slave name='i2c_scl.s1' start='0x4000040' end='0x4000050' type='altera_avalon_pio.s1' /><slave name='sw.s1' start='0x4000050' end='0x4000060' type='altera_avalon_pio.s1' /><slave name='pio_led.s1' start='0x4000060' end='0x4000070' type='altera_avalon_pio.s1' /><slave name='final_audio.s1' start='0x4000070' end='0x4000080' type='altera_avalon_pio.s1' /><slave name='init_audio.s1' start='0x4000080' end='0x4000090' type='altera_avalon_pio.s1' /><slave name='final_audio_3.s1' start='0x4000090' end='0x40000A0' type='altera_avalon_pio.s1' /><slave name='final_audio_2.s1' start='0x40000A0' end='0x40000B0' type='altera_avalon_pio.s1' /><slave name='final_audio_4.s1' start='0x40000B0' end='0x40000C0' type='altera_avalon_pio.s1' /><slave name='onchip_memory2.s1' start='0x5080000' end='0x50CE200' type='altera_avalon_onchip_memory2.s1' /><slave name='nios2_gen2_0.debug_mem_slave' start='0x5100800' end='0x5101000' type='altera_nios2_gen2.debug_mem_slave' /><slave name='audio.avalon_slave' start='0x5101000' end='0x5101020' type='AUDIO_IF.avalon_slave' /><slave name='timer.s1' start='0x5101020' end='0x5101040' type='altera_avalon_timer.s1' /><slave name='jtag_uart.avalon_jtag_slave' start='0x5101040' end='0x5101048' type='altera_avalon_jtag_uart.avalon_jtag_slave' /><slave name='sysid_qsys.control_slave' start='0x5101048' end='0x5101050' type='altera_avalon_sysid_qsys.control_slave' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -1416,6 +1558,33 @@
   <parameter name="baseAddress" value="0x0070" />
   <parameter name="defaultConnection" value="false" />
  </connection>
+ <connection
+   kind="avalon"
+   version="20.1"
+   start="cpu_pheripheral_bridge.m0"
+   end="final_audio_2.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00a0" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="20.1"
+   start="cpu_pheripheral_bridge.m0"
+   end="final_audio_3.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0090" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="20.1"
+   start="cpu_pheripheral_bridge.m0"
+   end="final_audio_4.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00b0" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
  <connection kind="clock" version="20.1" start="clk_50.clk" end="pll.refclk" />
  <connection
    kind="clock"
@@ -1453,6 +1622,21 @@
  <connection kind="clock" version="20.1" start="pll.outclk2" end="i2c_sda.clk" />
  <connection kind="clock" version="20.1" start="pll.outclk2" end="init_audio.clk" />
  <connection kind="clock" version="20.1" start="pll.outclk2" end="final_audio.clk" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="pll.outclk2"
+   end="final_audio_2.clk" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="pll.outclk2"
+   end="final_audio_3.clk" />
+ <connection
+   kind="clock"
+   version="20.1"
+   start="pll.outclk2"
+   end="final_audio_4.clk" />
  <connection kind="clock" version="20.1" start="pll.outclk2" end="seg7.clock_sink" />
  <connection
    kind="clock"
@@ -1556,6 +1740,21 @@
    version="20.1"
    start="clk_50.clk_reset"
    end="final_audio.reset" />
+ <connection
+   kind="reset"
+   version="20.1"
+   start="clk_50.clk_reset"
+   end="final_audio_2.reset" />
+ <connection
+   kind="reset"
+   version="20.1"
+   start="clk_50.clk_reset"
+   end="final_audio_3.reset" />
+ <connection
+   kind="reset"
+   version="20.1"
+   start="clk_50.clk_reset"
+   end="final_audio_4.reset" />
  <connection
    kind="reset"
    version="20.1"

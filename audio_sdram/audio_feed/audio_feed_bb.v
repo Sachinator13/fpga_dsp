@@ -1,6 +1,7 @@
 
 module audio_feed (
 	altpll_audio_locked_export,
+	audio_clock_export_clk,
 	audio_conduit_end_XCK,
 	audio_conduit_end_ADCDAT,
 	audio_conduit_end_ADCLRC,
@@ -8,8 +9,10 @@ module audio_feed (
 	audio_conduit_end_DACLRC,
 	audio_conduit_end_BCLK,
 	clk_clk,
+	final_audio_external_connection_export,
 	i2c_scl_external_connection_export,
 	i2c_sda_external_connection_export,
+	init_audio_external_connection_export,
 	key_external_connection_export,
 	pio_0_external_connection_export,
 	pll_locked_export,
@@ -26,10 +29,12 @@ module audio_feed (
 	sdram_wire_we_n,
 	seg7_conduit_end_export,
 	sw_external_connection_export,
-	init_audio_external_connection_export,
-	final_audio_external_connection_export);	
+	final_audio_3_external_connection_export,
+	final_audio_2_external_connection_export,
+	final_audio_4_external_connection_export);	
 
 	output		altpll_audio_locked_export;
+	output		audio_clock_export_clk;
 	output		audio_conduit_end_XCK;
 	input		audio_conduit_end_ADCDAT;
 	input		audio_conduit_end_ADCLRC;
@@ -37,8 +42,10 @@ module audio_feed (
 	input		audio_conduit_end_DACLRC;
 	input		audio_conduit_end_BCLK;
 	input		clk_clk;
+	input	[15:0]	final_audio_external_connection_export;
 	output		i2c_scl_external_connection_export;
 	inout		i2c_sda_external_connection_export;
+	output	[15:0]	init_audio_external_connection_export;
 	input	[3:0]	key_external_connection_export;
 	output	[9:0]	pio_0_external_connection_export;
 	output		pll_locked_export;
@@ -55,6 +62,7 @@ module audio_feed (
 	output		sdram_wire_we_n;
 	output	[47:0]	seg7_conduit_end_export;
 	input	[9:0]	sw_external_connection_export;
-	output	[15:0]	init_audio_external_connection_export;
-	input	[15:0]	final_audio_external_connection_export;
+	input	[15:0]	final_audio_3_external_connection_export;
+	input	[15:0]	final_audio_2_external_connection_export;
+	input	[15:0]	final_audio_4_external_connection_export;
 endmodule
