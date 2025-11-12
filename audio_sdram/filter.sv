@@ -1,16 +1,16 @@
 module filter_ce #(
     parameter taps        = 32,
-    parameter num_bits    = 8,     // coeff width
-    parameter input_size  = 16,    // match your 16-bit audio
+    parameter num_bits    = 8,     
+    parameter input_size  = 16,   
     parameter output_size = (2*num_bits) + 1
 )(
     input                       clock,
     input                       reset,
-    input                       ce,           // NEW: 48 kHz CE
+    input                       ce,        
     input  [input_size-1:0]     Data_In,
     output [output_size-1:0]    Data_Out
 );
-    // FILTER COEFFICIENTS (32 taps)
+   
     parameter h0  = 8'b0000_0011;
     parameter h1  = 8'b0000_0010;
     parameter h2  = 8'b0000_0001;
@@ -44,10 +44,9 @@ module filter_ce #(
     parameter h30 = 8'b0000_0010;
     parameter h31 = 8'b0000_0011; 
 
-    // 0-based delay line
     reg [input_size-1:0] FIR [0:taps-1];
 
-    // multiply–accumulate (combinational sum)
+  
     assign Data_Out =
                       h0  * FIR[0]  +
                       h1  * FIR[1]  +

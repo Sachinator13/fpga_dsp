@@ -1,7 +1,7 @@
 module distortion_ce (
   input  logic                   clk,
-  input  logic                   ce,          // NEW: step once per sample
-  input  logic signed [15:0]     input_sig,   // Q1.15
+  input  logic                   ce,          
+  input  logic signed [15:0]     input_sig,  
   output logic signed [15:0]     output_sig
 );
   localparam FS = 16'h7FFF;
