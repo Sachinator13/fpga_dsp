@@ -1,0 +1,23 @@
+module clkdiv #(
+	parameter WIDTH = 16
+)(
+	input logic 			clkin,
+	input logic 			en,
+	input logic [WIDTH-1:0] K,
+	output logic 			clkout
+);
+
+logic [WIDTH-1:0] count;
+
+initial clkout = 1'b0;
+initial count = {WIDTH{1'b0}};
+
+	always_ff @ (posedge clkin)
+		if (en == 1'b1)
+			if (count == {WIDTH{1'b0}}) begin
+				clkout <= ~clkout;
+				count <= K;
+				end
+			else
+				count <= count - 1'b1;
+endmodule

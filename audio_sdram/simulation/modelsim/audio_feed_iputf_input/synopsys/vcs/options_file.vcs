@@ -1,0 +1,17 @@
+  C:/repos/fpga_dsp/audio_sdram/tryingfil_sim/dspba_library_package.vhd \
+  C:/repos/fpga_dsp/audio_sdram/tryingfil_sim/dspba_library.vhd \
+  C:/repos/fpga_dsp/audio_sdram/tryingfil_sim/auk_dspip_math_pkg_hpfir.vhd \
+  C:/repos/fpga_dsp/audio_sdram/tryingfil_sim/auk_dspip_lib_pkg_hpfir.vhd \
+  C:/repos/fpga_dsp/audio_sdram/tryingfil_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd \
+  C:/repos/fpga_dsp/audio_sdram/tryingfil_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd \
+  C:/repos/fpga_dsp/audio_sdram/tryingfil_sim/auk_dspip_avalon_streaming_source_hpfir.vhd \
+  C:/repos/fpga_dsp/audio_sdram/tryingfil_sim/auk_dspip_roundsat_hpfir.vhd \
+  C:/repos/fpga_dsp/audio_sdram/tryingfil_sim/altera_avalon_sc_fifo.v \
+  C:/repos/fpga_dsp/audio_sdram/tryingfil_sim/tryingfil_rtl_core.vhd \
+  C:/repos/fpga_dsp/audio_sdram/tryingfil_sim/tryingfil_ast.vhd \
+  C:/repos/fpga_dsp/audio_sdram/tryingfil_sim/tryingfil.vhd \
+  C:/repos/fpga_dsp/audio_sdram/tryingfil_sim/tryingfil_tb.vhd \
+  C:/repos/fpga_dsp/audio_sdram/filter_48_sim/filter_48_rtl_core.vhd \
+  C:/repos/fpga_dsp/audio_sdram/filter_48_sim/filter_48_ast.vhd \
+  C:/repos/fpga_dsp/audio_sdram/filter_48_sim/filter_48.vhd \
+  C:/repos/fpga_dsp/audio_sdram/filter_48_sim/filter_48_tb.vhd \

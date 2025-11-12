@@ -1,5 +1,5 @@
 Timing Analyzer report for audio_feed
-Fri Aug 29 14:23:27 2025
+Sun Nov 02 19:44:01 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -103,26 +103,26 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 3.74        ;
+; Average used               ; 3.32        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  21.1%      ;
-;     Processor 3            ;  20.2%      ;
-;     Processor 4            ;  20.0%      ;
-;     Processor 5            ;  17.8%      ;
-;     Processor 6            ;  17.8%      ;
-;     Processor 7            ;  17.8%      ;
-;     Processor 8            ;  17.8%      ;
-;     Processor 9            ;  17.7%      ;
-;     Processor 10           ;  17.7%      ;
-;     Processor 11           ;  17.7%      ;
-;     Processor 12           ;  17.7%      ;
-;     Processor 13           ;  17.7%      ;
-;     Processor 14           ;  17.7%      ;
-;     Processor 15           ;  17.7%      ;
-;     Processor 16           ;  17.6%      ;
+;     Processor 2            ;  18.1%      ;
+;     Processor 3            ;  17.5%      ;
+;     Processor 4            ;  16.8%      ;
+;     Processor 5            ;  15.1%      ;
+;     Processor 6            ;  15.1%      ;
+;     Processor 7            ;  15.1%      ;
+;     Processor 8            ;  15.1%      ;
+;     Processor 9            ;  15.0%      ;
+;     Processor 10           ;  15.0%      ;
+;     Processor 11           ;  15.0%      ;
+;     Processor 12           ;  15.0%      ;
+;     Processor 13           ;  14.9%      ;
+;     Processor 14           ;  14.9%      ;
+;     Processor 15           ;  14.9%      ;
+;     Processor 16           ;  14.9%      ;
 +----------------------------+-------------+
 
 
@@ -131,11 +131,11 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                                ; Status ; Read at                  ;
 +------------------------------------------------------------------------------+--------+--------------------------+
-; audio_feed/synthesis/submodules/altera_reset_controller.sdc                  ; OK     ; Fri Aug 29 14:23:18 2025 ;
-; audio_feed/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.sdc ; OK     ; Fri Aug 29 14:23:18 2025 ;
-; audio_feed/synthesis/submodules/audio_feed_nios2_gen2_0_cpu.sdc              ; OK     ; Fri Aug 29 14:23:18 2025 ;
-; audio_feed/synthesis/submodules/altera_avalon_dc_fifo.sdc                    ; OK     ; Fri Aug 29 14:23:18 2025 ;
-; audio_sdram.sdc                                                              ; OK     ; Fri Aug 29 14:23:18 2025 ;
+; audio_feed/synthesis/submodules/altera_reset_controller.sdc                  ; OK     ; Sun Nov 02 19:43:52 2025 ;
+; audio_feed/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.sdc ; OK     ; Sun Nov 02 19:43:52 2025 ;
+; audio_feed/synthesis/submodules/audio_feed_nios2_gen2_0_cpu.sdc              ; OK     ; Sun Nov 02 19:43:52 2025 ;
+; audio_feed/synthesis/submodules/altera_avalon_dc_fifo.sdc                    ; OK     ; Sun Nov 02 19:43:52 2025 ;
+; audio_sdram.sdc                                                              ; OK     ; Sun Nov 02 19:43:52 2025 ;
 +------------------------------------------------------------------------------+--------+--------------------------+
 
 
@@ -158,17 +158,17 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------+-----------+---------+------------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+----------------------------------------------------------------------+---------------------------------------------------------------------------+----------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                                                                          ;
-+-----------+-----------------+------------------------------------------------------------------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name                                                             ; Note ;
-+-----------+-----------------+------------------------------------------------------------------------+------+
-; 8.48 MHz  ; 8.48 MHz        ; CLOCK_50                                                               ;      ;
-; 48.37 MHz ; 48.37 MHz       ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ;      ;
-; 54.39 MHz ; 54.39 MHz       ; altera_reserved_tck                                                    ;      ;
-; 59.56 MHz ; 59.56 MHz       ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 123.0 MHz ; 123.0 MHz       ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ;      ;
-+-----------+-----------------+------------------------------------------------------------------------+------+
++--------------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                                                           ;
++------------+-----------------+------------------------------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                                             ; Note ;
++------------+-----------------+------------------------------------------------------------------------+------+
+; 54.39 MHz  ; 54.39 MHz       ; altera_reserved_tck                                                    ;      ;
+; 58.91 MHz  ; 58.91 MHz       ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ;      ;
+; 76.53 MHz  ; 76.53 MHz       ; CLOCK_50                                                               ;      ;
+; 79.35 MHz  ; 79.35 MHz       ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 126.44 MHz ; 126.44 MHz      ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ;      ;
++------------+-----------------+------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -178,17 +178,17 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+--------------------------------------------------------------------------------------------------+
-; Slow 1100mV 85C Model Setup Summary                                                              ;
-+------------------------------------------------------------------------+---------+---------------+
-; Clock                                                                  ; Slack   ; End Point TNS ;
-+------------------------------------------------------------------------+---------+---------------+
-; CLOCK_50                                                               ; -97.927 ; -1404.005     ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; -15.941 ; -241.659      ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 1.870   ; 0.000         ;
-; altera_reserved_tck                                                    ; 10.807  ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.734  ; 0.000         ;
-+------------------------------------------------------------------------+---------+---------------+
++-------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary                                                             ;
++------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                  ; Slack  ; End Point TNS ;
++------------------------------------------------------------------------+--------+---------------+
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 2.091  ; 0.000         ;
+; CLOCK_50                                                               ; 6.933  ; 0.000         ;
+; altera_reserved_tck                                                    ; 10.807 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 13.248 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 20.828 ; 0.000         ;
++------------------------------------------------------------------------+--------+---------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -196,11 +196,11 @@ HTML report is unavailable in plain text report export.
 +------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                  ; Slack ; End Point TNS ;
 +------------------------------------------------------------------------+-------+---------------+
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.088 ; 0.000         ;
-; CLOCK_50                                                               ; 0.269 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.311 ; 0.000         ;
-; altera_reserved_tck                                                    ; 0.357 ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.372 ; 0.000         ;
+; CLOCK_50                                                               ; 0.304 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.310 ; 0.000         ;
+; altera_reserved_tck                                                    ; 0.311 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.315 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.341 ; 0.000         ;
 +------------------------------------------------------------------------+-------+---------------+
 
 
@@ -209,10 +209,10 @@ HTML report is unavailable in plain text report export.
 +------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                  ; Slack  ; End Point TNS ;
 +------------------------------------------------------------------------+--------+---------------+
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 5.659  ; 0.000         ;
-; altera_reserved_tck                                                    ; 18.865 ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 51.176 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 95.938 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 4.185  ; 0.000         ;
+; altera_reserved_tck                                                    ; 18.572 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 50.788 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 96.087 ; 0.000         ;
 +------------------------------------------------------------------------+--------+---------------+
 
 
@@ -221,10 +221,10 @@ HTML report is unavailable in plain text report export.
 +------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                  ; Slack ; End Point TNS ;
 +------------------------------------------------------------------------+-------+---------------+
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.658 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.766 ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.774 ; 0.000         ;
-; altera_reserved_tck                                                    ; 1.033 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.590 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.591 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.738 ; 0.000         ;
+; altera_reserved_tck                                                    ; 0.951 ; 0.000         ;
 +------------------------------------------------------------------------+-------+---------------+
 
 
@@ -235,11 +235,11 @@ HTML report is unavailable in plain text report export.
 +------------------------------------------------------------------------+--------+---------------+
 ; u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.233  ; 0.000         ;
 ; u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]            ; 1.666  ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 3.767  ; 0.000         ;
-; CLOCK_50                                                               ; 8.890  ; 0.000         ;
-; altera_reserved_tck                                                    ; 19.020 ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 25.908 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 48.768 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 3.770  ; 0.000         ;
+; CLOCK_50                                                               ; 9.078  ; 0.000         ;
+; altera_reserved_tck                                                    ; 19.146 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 25.902 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 48.765 ; 0.000         ;
 +------------------------------------------------------------------------+--------+---------------+
 
 
@@ -252,7 +252,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 74
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.257
-Worst Case Available Settling Time: 8.975 ns
+Worst Case Available Settling Time: 8.338 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
@@ -261,31 +261,31 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                                                                            ;
-+------------+-----------------+------------------------------------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                                                             ; Note ;
-+------------+-----------------+------------------------------------------------------------------------+------+
-; 8.36 MHz   ; 8.36 MHz        ; CLOCK_50                                                               ;      ;
-; 49.95 MHz  ; 49.95 MHz       ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ;      ;
-; 54.84 MHz  ; 54.84 MHz       ; altera_reserved_tck                                                    ;      ;
-; 61.87 MHz  ; 61.87 MHz       ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 126.12 MHz ; 126.12 MHz      ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ;      ;
-+------------+-----------------+------------------------------------------------------------------------+------+
++-------------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                                                           ;
++-----------+-----------------+------------------------------------------------------------------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name                                                             ; Note ;
++-----------+-----------------+------------------------------------------------------------------------+------+
+; 54.84 MHz ; 54.84 MHz       ; altera_reserved_tck                                                    ;      ;
+; 61.4 MHz  ; 61.4 MHz        ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ;      ;
+; 75.19 MHz ; 75.19 MHz       ; CLOCK_50                                                               ;      ;
+; 80.93 MHz ; 80.93 MHz       ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 129.7 MHz ; 129.7 MHz       ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ;      ;
++-----------+-----------------+------------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+--------------------------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Setup Summary                                                               ;
-+------------------------------------------------------------------------+---------+---------------+
-; Clock                                                                  ; Slack   ; End Point TNS ;
-+------------------------------------------------------------------------+---------+---------------+
-; CLOCK_50                                                               ; -99.672 ; -1425.559     ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; -16.455 ; -249.244      ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 2.071   ; 0.000         ;
-; altera_reserved_tck                                                    ; 10.882  ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 19.047  ; 0.000         ;
-+------------------------------------------------------------------------+---------+---------------+
++-------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary                                                              ;
++------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                  ; Slack  ; End Point TNS ;
++------------------------------------------------------------------------+--------+---------------+
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 2.290  ; 0.000         ;
+; CLOCK_50                                                               ; 6.700  ; 0.000         ;
+; altera_reserved_tck                                                    ; 10.882 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 13.361 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 20.951 ; 0.000         ;
++------------------------------------------------------------------------+--------+---------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -293,11 +293,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                  ; Slack ; End Point TNS ;
 +------------------------------------------------------------------------+-------+---------------+
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.062 ; 0.000         ;
-; CLOCK_50                                                               ; 0.143 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.289 ; 0.000         ;
-; altera_reserved_tck                                                    ; 0.329 ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.375 ; 0.000         ;
+; CLOCK_50                                                               ; 0.183 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.285 ; 0.000         ;
+; altera_reserved_tck                                                    ; 0.289 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.296 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.365 ; 0.000         ;
 +------------------------------------------------------------------------+-------+---------------+
 
 
@@ -306,10 +306,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                  ; Slack  ; End Point TNS ;
 +------------------------------------------------------------------------+--------+---------------+
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 5.880  ; 0.000         ;
-; altera_reserved_tck                                                    ; 18.932 ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 51.314 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 96.142 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 4.429  ; 0.000         ;
+; altera_reserved_tck                                                    ; 18.637 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 50.951 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 96.313 ; 0.000         ;
 +------------------------------------------------------------------------+--------+---------------+
 
 
@@ -318,10 +318,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                  ; Slack ; End Point TNS ;
 +------------------------------------------------------------------------+-------+---------------+
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.601 ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.613 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.687 ; 0.000         ;
-; altera_reserved_tck                                                    ; 0.938 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.542 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.545 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.656 ; 0.000         ;
+; altera_reserved_tck                                                    ; 0.877 ; 0.000         ;
 +------------------------------------------------------------------------+-------+---------------+
 
 
@@ -332,11 +332,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------------------------------+--------+---------------+
 ; u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.233  ; 0.000         ;
 ; u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]            ; 1.666  ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 3.742  ; 0.000         ;
-; CLOCK_50                                                               ; 8.844  ; 0.000         ;
-; altera_reserved_tck                                                    ; 19.012 ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 25.886 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 48.758 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 3.747  ; 0.000         ;
+; CLOCK_50                                                               ; 9.024  ; 0.000         ;
+; altera_reserved_tck                                                    ; 19.132 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 25.881 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 48.760 ; 0.000         ;
 +------------------------------------------------------------------------+--------+---------------+
 
 
@@ -349,7 +349,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 74
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.257
-Worst Case Available Settling Time: 8.961 ns
+Worst Case Available Settling Time: 8.354 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
@@ -358,17 +358,17 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 
 
 
-+--------------------------------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Setup Summary                                                              ;
-+------------------------------------------------------------------------+---------+---------------+
-; Clock                                                                  ; Slack   ; End Point TNS ;
-+------------------------------------------------------------------------+---------+---------------+
-; CLOCK_50                                                               ; -47.054 ; -665.529      ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; -0.422  ; -1.593        ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 4.857   ; 0.000         ;
-; altera_reserved_tck                                                    ; 12.888  ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21.567  ; 0.000         ;
-+------------------------------------------------------------------------+---------+---------------+
++-------------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Setup Summary                                                             ;
++------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                  ; Slack  ; End Point TNS ;
++------------------------------------------------------------------------+--------+---------------+
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 5.157  ; 0.000         ;
+; CLOCK_50                                                               ; 12.234 ; 0.000         ;
+; altera_reserved_tck                                                    ; 12.888 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 15.476 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 23.057 ; 0.000         ;
++------------------------------------------------------------------------+--------+---------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -376,11 +376,11 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                  ; Slack ; End Point TNS ;
 +------------------------------------------------------------------------+-------+---------------+
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.073 ; 0.000         ;
-; altera_reserved_tck                                                    ; 0.146 ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.180 ; 0.000         ;
+; altera_reserved_tck                                                    ; 0.115 ; 0.000         ;
+; CLOCK_50                                                               ; 0.177 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.177 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.179 ; 0.000         ;
 ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.181 ; 0.000         ;
-; CLOCK_50                                                               ; 0.204 ; 0.000         ;
 +------------------------------------------------------------------------+-------+---------------+
 
 
@@ -389,10 +389,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                  ; Slack  ; End Point TNS ;
 +------------------------------------------------------------------------+--------+---------------+
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 7.230  ; 0.000         ;
-; altera_reserved_tck                                                    ; 19.588 ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 52.271 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 97.211 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 6.247  ; 0.000         ;
+; altera_reserved_tck                                                    ; 19.415 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 51.934 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 97.412 ; 0.000         ;
 +------------------------------------------------------------------------+--------+---------------+
 
 
@@ -401,10 +401,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                  ; Slack ; End Point TNS ;
 +------------------------------------------------------------------------+-------+---------------+
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.354 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.472 ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.504 ; 0.000         ;
-; altera_reserved_tck                                                    ; 0.565 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.314 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.318 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.419 ; 0.000         ;
+; altera_reserved_tck                                                    ; 0.453 ; 0.000         ;
 +------------------------------------------------------------------------+-------+---------------+
 
 
@@ -415,11 +415,11 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------------------------------------------------+--------+---------------+
 ; u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.233  ; 0.000         ;
 ; u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]            ; 1.666  ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 3.883  ; 0.000         ;
-; CLOCK_50                                                               ; 8.792  ; 0.000         ;
-; altera_reserved_tck                                                    ; 19.012 ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 26.023 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 48.889 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 3.885  ; 0.000         ;
+; CLOCK_50                                                               ; 8.980  ; 0.000         ;
+; altera_reserved_tck                                                    ; 19.111 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 26.018 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 48.891 ; 0.000         ;
 +------------------------------------------------------------------------+--------+---------------+
 
 
@@ -432,7 +432,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 74
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.257
-Worst Case Available Settling Time: 9.416 ns
+Worst Case Available Settling Time: 8.989 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
@@ -441,17 +441,17 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 
 
 
-+--------------------------------------------------------------------------------------------------+
-; Fast 1100mV 0C Model Setup Summary                                                               ;
-+------------------------------------------------------------------------+---------+---------------+
-; Clock                                                                  ; Slack   ; End Point TNS ;
-+------------------------------------------------------------------------+---------+---------------+
-; CLOCK_50                                                               ; -42.518 ; -596.543      ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.825   ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 5.508   ; 0.000         ;
-; altera_reserved_tck                                                    ; 13.011  ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 22.192  ; 0.000         ;
-+------------------------------------------------------------------------+---------+---------------+
++-------------------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Setup Summary                                                              ;
++------------------------------------------------------------------------+--------+---------------+
+; Clock                                                                  ; Slack  ; End Point TNS ;
++------------------------------------------------------------------------+--------+---------------+
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 5.638  ; 0.000         ;
+; CLOCK_50                                                               ; 12.794 ; 0.000         ;
+; altera_reserved_tck                                                    ; 13.011 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 15.816 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 23.455 ; 0.000         ;
++------------------------------------------------------------------------+--------+---------------+
 
 
 +------------------------------------------------------------------------------------------------+
@@ -459,11 +459,11 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                  ; Slack ; End Point TNS ;
 +------------------------------------------------------------------------+-------+---------------+
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.050 ; 0.000         ;
-; CLOCK_50                                                               ; 0.114 ; 0.000         ;
-; altera_reserved_tck                                                    ; 0.118 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.164 ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.171 ; 0.000         ;
+; altera_reserved_tck                                                    ; 0.091 ; 0.000         ;
+; CLOCK_50                                                               ; 0.134 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.168 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.168 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.172 ; 0.000         ;
 +------------------------------------------------------------------------+-------+---------------+
 
 
@@ -472,10 +472,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                  ; Slack  ; End Point TNS ;
 +------------------------------------------------------------------------+--------+---------------+
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 7.574  ; 0.000         ;
-; altera_reserved_tck                                                    ; 19.650 ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 52.497 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 97.549 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 6.614  ; 0.000         ;
+; altera_reserved_tck                                                    ; 19.497 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 52.192 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 97.737 ; 0.000         ;
 +------------------------------------------------------------------------+--------+---------------+
 
 
@@ -484,10 +484,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                  ; Slack ; End Point TNS ;
 +------------------------------------------------------------------------+-------+---------------+
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.307 ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.350 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.397 ; 0.000         ;
-; altera_reserved_tck                                                    ; 0.482 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.282 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.288 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.360 ; 0.000         ;
+; altera_reserved_tck                                                    ; 0.392 ; 0.000         ;
 +------------------------------------------------------------------------+-------+---------------+
 
 
@@ -498,11 +498,11 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------------------------------------------------+--------+---------------+
 ; u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.233  ; 0.000         ;
 ; u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]            ; 1.666  ; 0.000         ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 3.885  ; 0.000         ;
-; CLOCK_50                                                               ; 8.784  ; 0.000         ;
-; altera_reserved_tck                                                    ; 19.043 ; 0.000         ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 26.019 ; 0.000         ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 48.888 ; 0.000         ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 3.886  ; 0.000         ;
+; CLOCK_50                                                               ; 8.979  ; 0.000         ;
+; altera_reserved_tck                                                    ; 19.124 ; 0.000         ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 26.016 ; 0.000         ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 48.889 ; 0.000         ;
 +------------------------------------------------------------------------+--------+---------------+
 
 
@@ -515,7 +515,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 74
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.257
-Worst Case Available Settling Time: 9.441 ns
+Worst Case Available Settling Time: 9.070 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
@@ -524,28 +524,28 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                                                    ;
-+-------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
-; Clock                                                                   ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+-------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                                        ; -99.672   ; 0.050 ; 5.659    ; 0.307   ; 1.233               ;
-;  CLOCK_50                                                               ; -99.672   ; 0.114 ; N/A      ; N/A     ; 8.784               ;
-;  altera_reserved_tck                                                    ; 10.807    ; 0.118 ; 18.865   ; 0.482   ; 19.012              ;
-;  u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A   ; N/A      ; N/A     ; 1.233               ;
-;  u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.734    ; 0.171 ; 51.176   ; 0.307   ; 25.886              ;
-;  u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]            ; N/A       ; N/A   ; N/A      ; N/A     ; 1.666               ;
-;  u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 1.870     ; 0.050 ; 5.659    ; 0.350   ; 3.742               ;
-;  u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; -16.455   ; 0.164 ; 95.938   ; 0.397   ; 48.758              ;
-; Design-wide TNS                                                         ; -1674.803 ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
-;  CLOCK_50                                                               ; -1425.559 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-;  altera_reserved_tck                                                    ; 0.000     ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
-;  u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A   ; N/A      ; N/A     ; 0.000               ;
-;  u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.000     ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
-;  u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]            ; N/A       ; N/A   ; N/A      ; N/A     ; 0.000               ;
-;  u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.000     ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
-;  u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; -249.244  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
-+-------------------------------------------------------------------------+-----------+-------+----------+---------+---------------------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                                 ;
++-------------------------------------------------------------------------+--------+-------+----------+---------+---------------------+
+; Clock                                                                   ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------------------------------------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack                                                        ; 2.091  ; 0.091 ; 4.185    ; 0.282   ; 1.233               ;
+;  CLOCK_50                                                               ; 6.700  ; 0.134 ; N/A      ; N/A     ; 8.979               ;
+;  altera_reserved_tck                                                    ; 10.807 ; 0.091 ; 18.572   ; 0.392   ; 19.111              ;
+;  u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A    ; N/A   ; N/A      ; N/A     ; 1.233               ;
+;  u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 20.828 ; 0.172 ; 50.788   ; 0.288   ; 25.881              ;
+;  u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]            ; N/A    ; N/A   ; N/A      ; N/A     ; 1.666               ;
+;  u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 2.091  ; 0.168 ; 4.185    ; 0.360   ; 3.747               ;
+;  u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 13.248 ; 0.168 ; 96.087   ; 0.282   ; 48.760              ;
+; Design-wide TNS                                                         ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  CLOCK_50                                                               ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  altera_reserved_tck                                                    ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
+;  u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A    ; N/A   ; N/A      ; N/A     ; 0.000               ;
+;  u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
+;  u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]            ; N/A    ; N/A   ; N/A      ; N/A     ; 0.000               ;
+;  u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
+;  u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
++-------------------------------------------------------------------------+--------+-------+----------+---------+---------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -888,10 +888,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; SW[4]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[3]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[3]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[6]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[5]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[8]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[7]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[6]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[5]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[0]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[1]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[2]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -1777,47 +1777,47 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +---------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                                                                                                                   ;
-+------------------------------------------------------------------------+------------------------------------------------------------------------+--------------+------------+----------+----------+
-; From Clock                                                             ; To Clock                                                               ; RR Paths     ; FR Paths   ; RF Paths ; FF Paths ;
-+------------------------------------------------------------------------+------------------------------------------------------------------------+--------------+------------+----------+----------+
-; altera_reserved_tck                                                    ; altera_reserved_tck                                                    ; 1545         ; 62         ; 39       ; 2        ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; altera_reserved_tck                                                    ; false path   ; 0          ; 0        ; 0        ;
-; CLOCK_50                                                               ; CLOCK_50                                                               ; > 2147483647 ; 0          ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; CLOCK_50                                                               ; 3003         ; 0          ; 0        ; 0        ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1391         ; 51         ; 1129     ; 96       ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 25           ; 0          ; 0        ; 0        ;
-; altera_reserved_tck                                                    ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; false path   ; false path ; 0        ; 0        ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 18           ; 0          ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 131721       ; 0          ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 41           ; 0          ; 0        ; 0        ;
-; CLOCK_50                                                               ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; > 2147483647 ; 0          ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 13           ; 0          ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 18860        ; 8          ; 1536     ; 48       ;
-+------------------------------------------------------------------------+------------------------------------------------------------------------+--------------+------------+----------+----------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                                                                 ;
++------------------------------------------------------------------------+------------------------------------------------------------------------+------------+------------+----------+----------+
+; From Clock                                                             ; To Clock                                                               ; RR Paths   ; FR Paths   ; RF Paths ; FF Paths ;
++------------------------------------------------------------------------+------------------------------------------------------------------------+------------+------------+----------+----------+
+; altera_reserved_tck                                                    ; altera_reserved_tck                                                    ; 1596       ; 63         ; 39       ; 2        ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; altera_reserved_tck                                                    ; false path ; 0          ; 0        ; 0        ;
+; CLOCK_50                                                               ; CLOCK_50                                                               ; 19137769   ; 0          ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; CLOCK_50                                                               ; 67         ; 0          ; 0        ; 0        ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1379       ; 49         ; 1119     ; 96       ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 25         ; 0          ; 0        ; 0        ;
+; altera_reserved_tck                                                    ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; false path ; false path ; 0        ; 0        ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 18         ; 0          ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 141250     ; 0          ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 41         ; 0          ; 0        ; 0        ;
+; CLOCK_50                                                               ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 47         ; 0          ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 13         ; 0          ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 18518      ; 8          ; 1644     ; 48       ;
++------------------------------------------------------------------------+------------------------------------------------------------------------+------------+------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                                                                                                                    ;
-+------------------------------------------------------------------------+------------------------------------------------------------------------+--------------+------------+----------+----------+
-; From Clock                                                             ; To Clock                                                               ; RR Paths     ; FR Paths   ; RF Paths ; FF Paths ;
-+------------------------------------------------------------------------+------------------------------------------------------------------------+--------------+------------+----------+----------+
-; altera_reserved_tck                                                    ; altera_reserved_tck                                                    ; 1545         ; 62         ; 39       ; 2        ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; altera_reserved_tck                                                    ; false path   ; 0          ; 0        ; 0        ;
-; CLOCK_50                                                               ; CLOCK_50                                                               ; > 2147483647 ; 0          ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; CLOCK_50                                                               ; 3003         ; 0          ; 0        ; 0        ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1391         ; 51         ; 1129     ; 96       ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 25           ; 0          ; 0        ; 0        ;
-; altera_reserved_tck                                                    ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; false path   ; false path ; 0        ; 0        ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 18           ; 0          ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 131721       ; 0          ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 41           ; 0          ; 0        ; 0        ;
-; CLOCK_50                                                               ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; > 2147483647 ; 0          ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 13           ; 0          ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 18860        ; 8          ; 1536     ; 48       ;
-+------------------------------------------------------------------------+------------------------------------------------------------------------+--------------+------------+----------+----------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                                                                  ;
++------------------------------------------------------------------------+------------------------------------------------------------------------+------------+------------+----------+----------+
+; From Clock                                                             ; To Clock                                                               ; RR Paths   ; FR Paths   ; RF Paths ; FF Paths ;
++------------------------------------------------------------------------+------------------------------------------------------------------------+------------+------------+----------+----------+
+; altera_reserved_tck                                                    ; altera_reserved_tck                                                    ; 1596       ; 63         ; 39       ; 2        ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; altera_reserved_tck                                                    ; false path ; 0          ; 0        ; 0        ;
+; CLOCK_50                                                               ; CLOCK_50                                                               ; 19137769   ; 0          ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; CLOCK_50                                                               ; 67         ; 0          ; 0        ; 0        ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1379       ; 49         ; 1119     ; 96       ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 25         ; 0          ; 0        ; 0        ;
+; altera_reserved_tck                                                    ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; false path ; false path ; 0        ; 0        ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 18         ; 0          ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 141250     ; 0          ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 41         ; 0          ; 0        ; 0        ;
+; CLOCK_50                                                               ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 47         ; 0          ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 13         ; 0          ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 18518      ; 8          ; 1644     ; 48       ;
++------------------------------------------------------------------------+------------------------------------------------------------------------+------------+------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -1826,10 +1826,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------------------------------------------------------------+------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                             ; To Clock                                                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------------------------------------------------+------------------------------------------------------------------------+----------+----------+----------+----------+
-; altera_reserved_tck                                                    ; altera_reserved_tck                                                    ; 71       ; 0        ; 2        ; 0        ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 236      ; 0        ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 1287     ; 0        ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 499      ; 0        ; 0        ; 0        ;
+; altera_reserved_tck                                                    ; altera_reserved_tck                                                    ; 75       ; 0        ; 2        ; 0        ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 233      ; 0        ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 1288     ; 0        ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 462      ; 0        ; 0        ; 0        ;
 +------------------------------------------------------------------------+------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1839,10 +1839,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------------------------------------------------------------+------------------------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                                             ; To Clock                                                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------------------------------------------------------------------+------------------------------------------------------------------------+----------+----------+----------+----------+
-; altera_reserved_tck                                                    ; altera_reserved_tck                                                    ; 71       ; 0        ; 2        ; 0        ;
-; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 236      ; 0        ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 1287     ; 0        ; 0        ; 0        ;
-; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 499      ; 0        ; 0        ; 0        ;
+; altera_reserved_tck                                                    ; altera_reserved_tck                                                    ; 75       ; 0        ; 2        ; 0        ;
+; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 233      ; 0        ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk          ; 1288     ; 0        ; 0        ; 0        ;
+; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk          ; 462      ; 0        ; 0        ; 0        ;
 +------------------------------------------------------------------------+------------------------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -2056,7 +2056,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Aug 29 14:23:16 2025
+    Info: Processing started: Sun Nov 02 19:43:50 2025
 Info: Command: quartus_sta audio_feed -c audio_feed
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 590 assignments for entity "DE1_SoC_Audio" -- entity does not exist in design
@@ -2650,6 +2650,11 @@ Warning (20013): Ignored 590 assignments for entity "DE1_SoC_Audio" -- entity do
     Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE1_SoC_Audio -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE1_SoC_Audio -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE1_SoC_Audio -section_id Top was ignored
+Warning (20013): Ignored 16 assignments for entity "tryingfil" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME altera_fir_compiler_ii -entity tryingfil -sip tryingfil.sip -library lib_tryingfil was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 20.1 -entity tryingfil -sip tryingfil.sip -library lib_tryingfil was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV mwpim -entity tryingfil -sip tryingfil.sip -library lib_tryingfil was ignored
+Warning (20013): Ignored 71 assignments for entity "tryingfil_0002" -- entity does not exist in design
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (21077): Low junction temperature is 0 degrees C
@@ -2710,6 +2715,38 @@ Warning (332060): Node: AUD_BCLK was determined to be a clock but was found with
 Warning (332060): Node: AUD_DACLRCK was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register audio_feed:u0|AUDIO_IF:audio|AUDIO_DAC:DAC_Instance|data_to_dac[3] is being clocked by AUD_DACLRCK
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama0~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama0~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama10~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama10~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama11~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama11~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama12~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama12~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama13~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama13~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama14~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama14~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama15~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama15~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama1~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama1~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama2~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama2~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama3~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama3~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama4~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama4~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama5~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama5~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama6~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama6~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama7~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama7~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama8~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama8~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama9~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama9~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama0~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama0~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama10~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama10~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama11~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama11~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama12~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama12~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama13~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama13~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama14~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama14~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama15~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama15~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama1~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama1~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama2~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama2~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama3~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama3~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama4~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama4~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama5~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama5~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama6~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama6~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama7~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama7~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama8~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama8~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama9~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama9~MEMORYREGOUT
     Info (332098): Cell: u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
@@ -2722,48 +2759,46 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
-Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -97.927
+Info (332146): Worst-case setup slack is 2.091
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -97.927           -1404.005 CLOCK_50 
-    Info (332119):   -15.941            -241.659 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     1.870               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     2.091               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     6.933               0.000 CLOCK_50 
     Info (332119):    10.807               0.000 altera_reserved_tck 
-    Info (332119):    18.734               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.088
+    Info (332119):    13.248               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    20.828               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.304
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.088               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.269               0.000 CLOCK_50 
-    Info (332119):     0.311               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.357               0.000 altera_reserved_tck 
-    Info (332119):     0.372               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case recovery slack is 5.659
+    Info (332119):     0.304               0.000 CLOCK_50 
+    Info (332119):     0.310               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.311               0.000 altera_reserved_tck 
+    Info (332119):     0.315               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.341               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case recovery slack is 4.185
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     5.659               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    18.865               0.000 altera_reserved_tck 
-    Info (332119):    51.176               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    95.938               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case removal slack is 0.658
+    Info (332119):     4.185               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    18.572               0.000 altera_reserved_tck 
+    Info (332119):    50.788               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    96.087               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case removal slack is 0.590
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.658               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.766               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.774               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     1.033               0.000 altera_reserved_tck 
+    Info (332119):     0.590               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.591               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.738               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.951               0.000 altera_reserved_tck 
 Info (332146): Worst-case minimum pulse width slack is 1.233
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     1.233               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     1.666               0.000 u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     3.767               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     8.890               0.000 CLOCK_50 
-    Info (332119):    19.020               0.000 altera_reserved_tck 
-    Info (332119):    25.908               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    48.768               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     3.770               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     9.078               0.000 CLOCK_50 
+    Info (332119):    19.146               0.000 altera_reserved_tck 
+    Info (332119):    25.902               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    48.765               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332114): Report Metastability: Found 74 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -2771,7 +2806,7 @@ Info (332114): Report Metastability: Found 74 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 74
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.257
-    Info (332114): Worst Case Available Settling Time: 8.975 ns
+    Info (332114): Worst Case Available Settling Time: 8.338 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
@@ -2785,6 +2820,38 @@ Warning (332060): Node: AUD_BCLK was determined to be a clock but was found with
 Warning (332060): Node: AUD_DACLRCK was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register audio_feed:u0|AUDIO_IF:audio|AUDIO_DAC:DAC_Instance|data_to_dac[3] is being clocked by AUD_DACLRCK
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama0~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama0~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama10~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama10~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama11~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama11~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama12~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama12~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama13~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama13~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama14~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama14~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama15~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama15~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama1~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama1~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama2~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama2~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama3~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama3~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama4~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama4~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama5~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama5~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama6~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama6~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama7~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama7~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama8~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama8~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama9~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama9~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama0~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama0~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama10~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama10~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama11~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama11~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama12~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama12~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama13~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama13~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama14~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama14~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama15~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama15~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama1~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama1~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama2~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama2~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama3~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama3~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama4~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama4~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama5~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama5~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama6~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama6~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama7~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama7~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama8~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama8~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama9~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama9~MEMORYREGOUT
     Info (332098): Cell: u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
@@ -2795,48 +2862,46 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: u0|pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -99.672
+Info (332146): Worst-case setup slack is 2.290
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -99.672           -1425.559 CLOCK_50 
-    Info (332119):   -16.455            -249.244 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     2.071               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     2.290               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     6.700               0.000 CLOCK_50 
     Info (332119):    10.882               0.000 altera_reserved_tck 
-    Info (332119):    19.047               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.062
+    Info (332119):    13.361               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    20.951               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.183
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.062               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.143               0.000 CLOCK_50 
-    Info (332119):     0.289               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.329               0.000 altera_reserved_tck 
-    Info (332119):     0.375               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case recovery slack is 5.880
+    Info (332119):     0.183               0.000 CLOCK_50 
+    Info (332119):     0.285               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.289               0.000 altera_reserved_tck 
+    Info (332119):     0.296               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.365               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case recovery slack is 4.429
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     5.880               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    18.932               0.000 altera_reserved_tck 
-    Info (332119):    51.314               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    96.142               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case removal slack is 0.601
+    Info (332119):     4.429               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    18.637               0.000 altera_reserved_tck 
+    Info (332119):    50.951               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    96.313               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case removal slack is 0.542
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.601               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.613               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.687               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.938               0.000 altera_reserved_tck 
+    Info (332119):     0.542               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.545               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.656               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.877               0.000 altera_reserved_tck 
 Info (332146): Worst-case minimum pulse width slack is 1.233
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     1.233               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     1.666               0.000 u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     3.742               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     8.844               0.000 CLOCK_50 
-    Info (332119):    19.012               0.000 altera_reserved_tck 
-    Info (332119):    25.886               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    48.758               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     3.747               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     9.024               0.000 CLOCK_50 
+    Info (332119):    19.132               0.000 altera_reserved_tck 
+    Info (332119):    25.881               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    48.760               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332114): Report Metastability: Found 74 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -2844,7 +2909,7 @@ Info (332114): Report Metastability: Found 74 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 74
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.257
-    Info (332114): Worst Case Available Settling Time: 8.961 ns
+    Info (332114): Worst Case Available Settling Time: 8.354 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
@@ -2858,6 +2923,38 @@ Warning (332060): Node: AUD_BCLK was determined to be a clock but was found with
 Warning (332060): Node: AUD_DACLRCK was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register audio_feed:u0|AUDIO_IF:audio|AUDIO_DAC:DAC_Instance|data_to_dac[3] is being clocked by AUD_DACLRCK
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama0~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama0~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama10~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama10~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama11~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama11~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama12~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama12~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama13~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama13~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama14~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama14~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama15~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama15~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama1~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama1~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama2~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama2~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama3~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama3~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama4~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama4~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama5~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama5~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama6~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama6~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama7~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama7~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama8~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama8~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama9~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama9~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama0~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama0~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama10~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama10~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama11~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama11~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama12~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama12~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama13~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama13~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama14~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama14~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama15~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama15~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama1~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama1~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama2~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama2~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama3~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama3~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama4~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama4~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama5~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama5~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama6~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama6~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama7~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama7~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama8~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama8~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama9~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama9~MEMORYREGOUT
     Info (332098): Cell: u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
@@ -2868,48 +2965,46 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: u0|pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -47.054
+Info (332146): Worst-case setup slack is 5.157
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -47.054            -665.529 CLOCK_50 
-    Info (332119):    -0.422              -1.593 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     4.857               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     5.157               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    12.234               0.000 CLOCK_50 
     Info (332119):    12.888               0.000 altera_reserved_tck 
-    Info (332119):    21.567               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.073
+    Info (332119):    15.476               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    23.057               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.115
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.073               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.146               0.000 altera_reserved_tck 
-    Info (332119):     0.180               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.115               0.000 altera_reserved_tck 
+    Info (332119):     0.177               0.000 CLOCK_50 
+    Info (332119):     0.177               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.179               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
     Info (332119):     0.181               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.204               0.000 CLOCK_50 
-Info (332146): Worst-case recovery slack is 7.230
+Info (332146): Worst-case recovery slack is 6.247
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     7.230               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    19.588               0.000 altera_reserved_tck 
-    Info (332119):    52.271               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    97.211               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case removal slack is 0.354
+    Info (332119):     6.247               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    19.415               0.000 altera_reserved_tck 
+    Info (332119):    51.934               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    97.412               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case removal slack is 0.314
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.354               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.472               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.504               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.565               0.000 altera_reserved_tck 
+    Info (332119):     0.314               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.318               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.419               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.453               0.000 altera_reserved_tck 
 Info (332146): Worst-case minimum pulse width slack is 1.233
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     1.233               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     1.666               0.000 u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     3.883               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     8.792               0.000 CLOCK_50 
-    Info (332119):    19.012               0.000 altera_reserved_tck 
-    Info (332119):    26.023               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    48.889               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     3.885               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.980               0.000 CLOCK_50 
+    Info (332119):    19.111               0.000 altera_reserved_tck 
+    Info (332119):    26.018               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    48.891               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332114): Report Metastability: Found 74 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -2917,7 +3012,7 @@ Info (332114): Report Metastability: Found 74 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 74
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.257
-    Info (332114): Worst Case Available Settling Time: 9.416 ns
+    Info (332114): Worst Case Available Settling Time: 8.989 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 79.4
@@ -2929,6 +3024,38 @@ Warning (332060): Node: AUD_BCLK was determined to be a clock but was found with
 Warning (332060): Node: AUD_DACLRCK was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register audio_feed:u0|AUDIO_IF:audio|AUDIO_DAC:DAC_Instance|data_to_dac[3] is being clocked by AUD_DACLRCK
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama0~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama0~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama10~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama10~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama11~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama11~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama12~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama12~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama13~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama13~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama14~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama14~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama15~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama15~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama1~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama1~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama2~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama2~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama3~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama3~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama4~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama4~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama5~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama5~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama6~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama6~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama7~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama7~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama8~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama8~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama9~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:d_xIn_0_13_mem_dmem|altera_syncram_j914:auto_generated|altsyncram_kmb4:altsyncram1|lutrama9~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama0~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama0~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama10~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama10~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama11~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama11~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama12~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama12~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama13~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama13~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama14~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama14~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama15~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama15~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama1~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama1~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama2~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama2~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama3~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama3~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama4~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama4~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama5~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama5~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama6~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama6~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama7~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama7~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama8~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama8~MEMORYREGOUT
+    Info (332098): From: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama9~CLKMUX_0  to: filter_48:u_fir|filter_48_0002:filter_48_inst|filter_48_0002_ast:filter_48_0002_ast_inst|filter_48_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_memr0_dmem|altera_syncram_3fv3:auto_generated|altsyncram_4s94:altsyncram1|lutrama9~MEMORYREGOUT
     Info (332098): Cell: u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
     Info (332098): Cell: u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_REFCLK_SELECT  from: clkin[0]  to: clkout
@@ -2939,48 +3066,46 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
     Info (332098): Cell: u0|pll|altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
     Info (332098): Cell: u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER  from: vco0ph[0]  to: divclk
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -42.518
+Info (332146): Worst-case setup slack is 5.638
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -42.518            -596.543 CLOCK_50 
-    Info (332119):     0.825               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     5.508               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     5.638               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    12.794               0.000 CLOCK_50 
     Info (332119):    13.011               0.000 altera_reserved_tck 
-    Info (332119):    22.192               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case hold slack is 0.050
+    Info (332119):    15.816               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    23.455               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case hold slack is 0.091
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.050               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.114               0.000 CLOCK_50 
-    Info (332119):     0.118               0.000 altera_reserved_tck 
-    Info (332119):     0.164               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.171               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case recovery slack is 7.574
+    Info (332119):     0.091               0.000 altera_reserved_tck 
+    Info (332119):     0.134               0.000 CLOCK_50 
+    Info (332119):     0.168               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.168               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.172               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case recovery slack is 6.614
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     7.574               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    19.650               0.000 altera_reserved_tck 
-    Info (332119):    52.497               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    97.549               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case removal slack is 0.307
+    Info (332119):     6.614               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    19.497               0.000 altera_reserved_tck 
+    Info (332119):    52.192               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    97.737               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+Info (332146): Worst-case removal slack is 0.282
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.307               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.350               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.397               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     0.482               0.000 altera_reserved_tck 
+    Info (332119):     0.282               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.288               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.360               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.392               0.000 altera_reserved_tck 
 Info (332146): Worst-case minimum pulse width slack is 1.233
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     1.233               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     1.666               0.000 u0|pll|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
-    Info (332119):     3.885               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):     8.784               0.000 CLOCK_50 
-    Info (332119):    19.043               0.000 altera_reserved_tck 
-    Info (332119):    26.019               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):    48.888               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     3.886               0.000 u0|pll|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     8.979               0.000 CLOCK_50 
+    Info (332119):    19.124               0.000 altera_reserved_tck 
+    Info (332119):    26.016               0.000 u0|altpll_audio|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    48.889               0.000 u0|pll|altera_pll_i|general[2].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332114): Report Metastability: Found 74 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -2988,7 +3113,7 @@ Info (332114): Report Metastability: Found 74 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 74
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.257
-    Info (332114): Worst Case Available Settling Time: 9.441 ns
+    Info (332114): Worst Case Available Settling Time: 9.070 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 5.2
@@ -2996,10 +3121,10 @@ Info (332114): Report Metastability: Found 74 synchronizer chains.
     Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 17.8
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 605 warnings
-    Info: Peak virtual memory: 5624 megabytes
-    Info: Processing ended: Fri Aug 29 14:23:26 2025
-    Info: Elapsed time: 00:00:10
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 606 warnings
+    Info: Peak virtual memory: 5852 megabytes
+    Info: Processing ended: Sun Nov 02 19:44:01 2025
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:29
 
 

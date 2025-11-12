@@ -1,8 +1,7 @@
 
 //`define ENABLE_HPS
-
-module audio_sdram(
-
+/// nyehehehhehe hi george
+in
       ///////// ADC /////////
       output             ADC_CONVST,
       output             ADC_DIN,
@@ -256,8 +255,8 @@ wire [15:0] final_audio_4;
 // ===================== 48 kHz CE from LRCLK =====================
 // Sync AUD_DACLRC (or AUD_ADCLRCK) into CLOCK_50 and make a 1-cycle pulse at 48 kHz.
 reg [2:0] lr_sync;
-always @(posedge CLOCK_50) lr_sync <= {lr_sync[1:0], AUD_DACLRCK};  // or AUD_ADCLRCK
-wire ce_48k = (lr_sync[2:1] == 2'b01);  // rising-edge pulse @ ~48 kHz
+always @(posedge CLOCK_50) lr_sync <= {lr_sync[1:0], AUD_ADCLRCK};
+wire ce_48k = (lr_sync[2:1] == 2'b01);
 
 // ===================== FINAL AUDIO PATHS ========================
 
@@ -271,34 +270,77 @@ assign final_audio = final_audio_r;
 // 2) final_audio_2 — pass-through only on 48 kHz CE
 reg [15:0] final_audio_2_r;
 always @(posedge CLOCK_50) begin
-  if (ce_48k) final_audio_2_r <= init_audio;
+  final_audio_2_r <= init_audio;
 end
 assign final_audio_2 = final_audio_2_r;
 
 // 3) final_audio_3 — distortion, stepped by 48 kHz CE
 //    Add a CE to the distortion module (see CE-enabled version below)
 wire [15:0] distortion_out;
-distortion_ce hopeful (
-  .clk        (CLOCK_50),
-  .ce         (ce_48k),
-  .input_sig  (init_audio),
-  .output_sig (distortion_out)
+
+
+
+wire [15:0] ast_sink_data   = sample_in;
+wire        ast_sink_valid  = sample_stb; // assert only when presenting a new sample
+wire [1:0]  ast_sink_error  = 2'b00;      // no error on input
+
+    // Outputs from FIR II
+wire [15:0] ast_source_data;
+wire        ast_source_valid;
+wire [1:0]  ast_source_error;             // ignore or monitor
+
+wire  signed [15:0] sample_in;  // your 16-bit input sample
+wire                sample_stb;  // 1 clk pulse when a new 48 kHz sample is available
+wire  signed [15:0] sample_out;  // filtered 16-bit output
+wire                out_valid;
+
+
+filter_48 u_fir (
+    .clk              (CLOCK_50),
+    .reset_n          (reset_n),
+    .ast_sink_data    (init_audio),
+    .ast_sink_valid   (ce_48k),
+    .ast_sink_error   (ast_sink_error),
+    .ast_source_data  (ast_source_data),
+    .ast_source_valid (ast_source_valid),
+    .ast_source_error (ast_source_error)
 );
-assign final_audio_3 = distortion_out;
+
+
+
+reg [15:0] final_audio_3_r;
+always @(posedge CLOCK_50) begin
+  if (ast_source_valid) final_audio_3_r <= ast_source_data;
+end
+assign final_audio_3 = final_audio_3_r;
+
+
+// reg [15:0] final_audio_3_r;
+// always @(posedge CLOCK_50) begin
+//   final_audio_3_r <= init_audio;
+// end
+// assign final_audio_3 = final_audio_3_r;
 
 // 4) final_audio_4 — filter 'filt' stepped by 48 kHz CE
 //    Use a CE-enabled wrapper of your 'filter' (same algorithm, just gated)
 wire [15:0] filt_out;  // downsize to 16 here; adjust if you want more headroom
 // Transposed form
-new_fir_transposed_flat #(.N(39), .DATA_W(16), .COEF_W(16)) u_fir (
-  .clk    (CLOCK_50),
-  .ce     (ce_48k),
-  .x_in   (init_audio),
-  .coeffs_flat (TAPSS),          // <-- just wire the array
-  .y_out  (filt_out)
+filter FIRFILKTER(
+	.clock(CLOCK_50),
+	.ce(ce_48k),
+	.Data_In(init_audio),
+	.Data_Out(filt_out)
 );
+
+
+
+
+reg [15:0] final_audio_4_r;
+always @(posedge CLOCK_50) begin
+  final_audio_4_r <= filt_out;
+end
 // simple truncation; replace with rounding/saturation as you like
-assign final_audio_4 = filt_out[15:0];  // keep 16 MSBs
+assign final_audio_4 = final_audio_4_r;  // keep 16 MSBs
 
 	audio_feed u0 (
 		.clk_clk                            (CLOCK_50),                            //                         clk.clk
@@ -336,8 +378,8 @@ assign final_audio_4 = filt_out[15:0];  // keep 16 MSBs
 		.init_audio_external_connection_export  (init_audio),  //  init_audio_external_connection.export
 		.final_audio_external_connection_export (final_audio),  // final_audio_external_connection.export
 		.audio_clock_export_clk                 (clk_18432),
-		.final_audio_3_external_connection_export (final_audio_2), // final_audio_3_external_connection.export
-		.final_audio_2_external_connection_export (final_audio_3), // final_audio_2_external_connection.export
+		.final_audio_2_external_connection_export (final_audio_2), // final_audio_3_external_connection.export
+		.final_audio_3_external_connection_export (final_audio_3), // final_audio_2_external_connection.export
 		.final_audio_4_external_connection_export (final_audio_4)  // final_audio_4_external_connection.export
 	);
 	

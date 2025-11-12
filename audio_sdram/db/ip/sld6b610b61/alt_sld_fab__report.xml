@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2025.08.29.16:25:50"
+ date="2025.11.02.19:41:06"
  outputDirectory="C:/repos/fpga_dsp/audio_sdram/db/ip/sld6b610b61/">
  <perimeter>
   <parameter

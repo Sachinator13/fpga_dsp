@@ -1,0 +1,10 @@
+module processor (
+	input clk,
+	input [15:0] input_sig,
+	output reg [15:0] output_sig
+	);
+	
+	always @(posedge clk)
+		output_sig <= input_sig;
+		
+endmodule

@@ -1,5 +1,5 @@
 Flow report for audio_feed
-Fri Aug 29 16:26:01 2025
+Sun Nov 02 19:44:01 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,25 +41,25 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Aug 29 16:26:01 2025       ;
+; Flow Status                     ; Successful - Sun Nov 02 19:43:49 2025       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; audio_feed                                  ;
 ; Top-level Entity Name           ; audio_sdram                                 ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2887                                        ;
-; Total pins                      ; 241                                         ;
+; Logic utilization (in ALMs)     ; 2,113 / 32,070 ( 7 % )                      ;
+; Total registers                 ; 3519                                        ;
+; Total pins                      ; 241 / 457 ( 53 % )                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 2,589,568                                   ;
-; Total DSP Blocks                ; 21                                          ;
+; Total block memory bits         ; 2,589,568 / 4,065,280 ( 64 % )              ;
+; Total DSP Blocks                ; 25 / 87 ( 29 % )                            ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
 ; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 2                                           ;
-; Total DLLs                      ; 0                                           ;
+; Total PLLs                      ; 2 / 6 ( 33 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
 +---------------------------------+---------------------------------------------+
 
 
@@ -68,38 +68,84 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/29/2025 16:25:34 ;
+; Start date & time ; 11/02/2025 19:40:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; audio_feed          ;
 +-------------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                ;
-+-------------------------------------+--------------------------------------------------------------+---------------+---------------+------------+
-; Assignment Name                     ; Value                                                        ; Default Value ; Entity Name   ; Section Id ;
-+-------------------------------------+--------------------------------------------------------------+---------------+---------------+------------+
-; COMPILER_SIGNATURE_ID               ; 231273227125823.175648113425720                              ; --            ; --            ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                           ; --            ; --            ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                            ; --            ; --            ; --         ;
-; MISC_FILE                           ; audio_feed/synthesis/../audio_feed.cmp                       ; --            ; --            ; --         ;
-; MISC_FILE                           ; audio_feed/synthesis/../../audio_feed.qsys                   ; --            ; --            ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                       ; --            ; DE1_SoC_Audio ; Top        ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                       ; --            ; audio_sdram   ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                       ; --            ; DE1_SoC_Audio ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                       ; --            ; audio_sdram   ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                       ; --            ; DE1_SoC_Audio ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                       ; --            ; audio_sdram   ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                          ; --            ; --            ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                        ; --            ; --            ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                 ; --            ; --            ; --         ;
-; SLD_FILE                            ; audio_feed/synthesis/audio_feed.regmap                       ; --            ; --            ; --         ;
-; SLD_FILE                            ; audio_feed/synthesis/audio_feed.debuginfo                    ; --            ; --            ; --         ;
-; SLD_INFO                            ; QSYS_NAME audio_feed HAS_SOPCINFO 1 GENERATION_ID 1756386196 ; --            ; --            ; --         ;
-; SOPCINFO_FILE                       ; audio_feed/synthesis/../../audio_feed.sopcinfo               ; --            ; --            ; --         ;
-; SYNTHESIS_ONLY_QIP                  ; On                                                           ; --            ; --            ; --         ;
-; TOP_LEVEL_ENTITY                    ; audio_sdram                                                  ; audio_feed    ; --            ; --         ;
-+-------------------------------------+--------------------------------------------------------------+---------------+---------------+------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                 ;
++-------------------------------------+---------------------------------------------------------------+---------------+---------------+------------+
+; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name   ; Section Id ;
++-------------------------------------+---------------------------------------------------------------+---------------+---------------+------------+
+; COMPILER_SIGNATURE_ID               ; 231273227125823.176211245028792                               ; --            ; --            ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                            ; --            ; --            ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                             ; --            ; --            ; --         ;
+; MISC_FILE                           ; audio_feed/synthesis/../audio_feed.cmp                        ; --            ; --            ; --         ;
+; MISC_FILE                           ; audio_feed/synthesis/../../audio_feed.qsys                    ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil.cmp                                                 ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/dspba_library_package.vhd                       ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/dspba_library.vhd                               ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/auk_dspip_math_pkg_hpfir.vhd                    ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/auk_dspip_lib_pkg_hpfir.vhd                     ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd       ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/auk_dspip_avalon_streaming_source_hpfir.vhd     ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/auk_dspip_roundsat_hpfir.vhd                    ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/altera_avalon_sc_fifo.v                         ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/tryingfil_rtl_core.vhd                          ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/tryingfil_ast.vhd                               ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/tryingfil.vhd                                   ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/tryingfil_nativelink.tcl                        ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/tryingfil_msim.tcl                              ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/tryingfil_tb.vhd                                ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/tryingfil_mlab.m                                ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/tryingfil_model.m                               ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/tryingfil_coef_int.txt                          ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/tryingfil_input.txt                             ; --            ; --            ; --         ;
+; MISC_FILE                           ; tryingfil_sim/tryingfil_param.txt                             ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48.cmp                                                 ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/dspba_library_package.vhd                       ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/dspba_library.vhd                               ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/auk_dspip_math_pkg_hpfir.vhd                    ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/auk_dspip_lib_pkg_hpfir.vhd                     ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd       ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/auk_dspip_avalon_streaming_source_hpfir.vhd     ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/auk_dspip_roundsat_hpfir.vhd                    ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/altera_avalon_sc_fifo.v                         ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/filter_48_rtl_core.vhd                          ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/filter_48_ast.vhd                               ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/filter_48.vhd                                   ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/filter_48_nativelink.tcl                        ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/filter_48_msim.tcl                              ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/filter_48_tb.vhd                                ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/filter_48_mlab.m                                ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/filter_48_model.m                               ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/filter_48_coef_int.txt                          ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/filter_48_input.txt                             ; --            ; --            ; --         ;
+; MISC_FILE                           ; filter_48_sim/filter_48_param.txt                             ; --            ; --            ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                        ; --            ; DE1_SoC_Audio ; Top        ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                        ; --            ; audio_sdram   ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                        ; --            ; DE1_SoC_Audio ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                        ; --            ; audio_sdram   ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                        ; --            ; DE1_SoC_Audio ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                        ; --            ; audio_sdram   ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                           ; --            ; --            ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                         ; --            ; --            ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                  ; --            ; --            ; --         ;
+; SLD_FILE                            ; audio_feed/synthesis/audio_feed.regmap                        ; --            ; --            ; --         ;
+; SLD_FILE                            ; audio_feed/synthesis/audio_feed.debuginfo                     ; --            ; --            ; --         ;
+; SLD_INFO                            ; QSYS_NAME audio_feed HAS_SOPCINFO 1 GENERATION_ID 1756386196  ; --            ; --            ; --         ;
+; SOPCINFO_FILE                       ; audio_feed/synthesis/../../audio_feed.sopcinfo                ; --            ; --            ; --         ;
+; SPD_FILE                            ; tryingfil.spd                                                 ; --            ; --            ; --         ;
+; SPD_FILE                            ; filter_48.spd                                                 ; --            ; --            ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                            ; --            ; --            ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                            ; --            ; --            ; --         ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                            ; --            ; --            ; --         ;
+; TOP_LEVEL_ENTITY                    ; audio_sdram                                                   ; audio_feed    ; --            ; --         ;
++-------------------------------------+---------------------------------------------------------------+---------------+---------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -107,8 +153,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 5193 MB             ; 00:00:38                           ;
-; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:38                           ;
+; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 5210 MB             ; 00:00:38                           ;
+; Fitter               ; 00:02:24     ; 1.3                     ; 8635 MB             ; 00:13:52                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4948 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:11     ; 3.3                     ; 5852 MB             ; 00:00:29                           ;
+; Total                ; 00:03:05     ; --                      ; --                  ; 00:15:05                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,6 +167,9 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; DESKTOP-H31SVF4  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-H31SVF4  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-H31SVF4  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-H31SVF4  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -125,6 +177,9 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off audio_feed -c audio_feed
+quartus_fit --read_settings_files=off --write_settings_files=off audio_feed -c audio_feed
+quartus_asm --read_settings_files=off --write_settings_files=off audio_feed -c audio_feed
+quartus_sta audio_feed -c audio_feed
 
 
 

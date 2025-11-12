@@ -1,0 +1,6 @@
+22:18:59 **** Build of configuration Nios II for project audio_feed_7_bsp ****
+wsl make all 
+[BSP build complete]
+
+22:19:00 Build Finished (took 336ms)
+

@@ -1,0 +1,6 @@
+17:24:26 **** Clean-only build of configuration Nios II for project audio_feed_2 ****
+wsl make clean 
+[audio_feed_2 clean complete]
+
+17:24:27 Build Finished (took 870ms)
+

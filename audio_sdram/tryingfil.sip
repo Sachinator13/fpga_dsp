@@ -1,0 +1,25 @@
+set_global_assignment -entity "tryingfil" -library "lib_tryingfil" -name IP_TOOL_NAME "altera_fir_compiler_ii"
+set_global_assignment -entity "tryingfil" -library "lib_tryingfil" -name IP_TOOL_VERSION "20.1"
+set_global_assignment -entity "tryingfil" -library "lib_tryingfil" -name IP_TOOL_ENV "mwpim"
+set_global_assignment -library "lib_tryingfil" -name SPD_FILE [file join $::quartus(sip_path) "tryingfil.spd"]
+
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/dspba_library_package.vhd"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/dspba_library.vhd"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/auk_dspip_math_pkg_hpfir.vhd"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/auk_dspip_lib_pkg_hpfir.vhd"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/auk_dspip_avalon_streaming_source_hpfir.vhd"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/auk_dspip_roundsat_hpfir.vhd"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/altera_avalon_sc_fifo.v"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/tryingfil_rtl_core.vhd"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/tryingfil_ast.vhd"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/tryingfil.vhd"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/tryingfil_nativelink.tcl"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/tryingfil_msim.tcl"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/tryingfil_tb.vhd"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/tryingfil_mlab.m"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/tryingfil_model.m"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/tryingfil_coef_int.txt"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/tryingfil_input.txt"]
+set_global_assignment -library "lib_tryingfil" -name MISC_FILE [file join $::quartus(sip_path) "tryingfil_sim/tryingfil_param.txt"]

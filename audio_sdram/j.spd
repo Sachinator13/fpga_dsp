@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="j_sim/dspba_library_package.vhd" type="VHDL" />
+ <file path="j_sim/dspba_library.vhd" type="VHDL" />
+ <file path="j_sim/auk_dspip_math_pkg_hpfir.vhd" type="VHDL" />
+ <file path="j_sim/auk_dspip_lib_pkg_hpfir.vhd" type="VHDL" />
+ <file
+   path="j_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd"
+   type="VHDL" />
+ <file path="j_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd" type="VHDL" />
+ <file path="j_sim/auk_dspip_avalon_streaming_source_hpfir.vhd" type="VHDL" />
+ <file path="j_sim/auk_dspip_roundsat_hpfir.vhd" type="VHDL" />
+ <file path="j_sim/altera_avalon_sc_fifo.v" type="VERILOG" />
+ <file path="j_sim/j_rtl_core.vhd" type="VHDL" />
+ <file path="j_sim/j_ast.vhd" type="VHDL" />
+ <file path="j_sim/j.vhd" type="VHDL" />
+ <file path="j_sim/j_nativelink.tcl" type="OTHER" />
+ <file path="j_sim/j_msim.tcl" type="OTHER" />
+ <file path="j_sim/j_tb.vhd" type="VHDL" />
+ <file path="j_sim/j_mlab.m" type="OTHER" />
+ <file path="j_sim/j_model.m" type="OTHER" />
+ <file path="j_sim/j_coef_int.txt" type="OTHER" />
+ <file path="j_sim/j_input.txt" type="OTHER" />
+ <file path="j_sim/j_param.txt" type="OTHER" />
+ <topLevel name="j" />
+ <deviceFamily name="cyclonev" />
+</simPackage>
